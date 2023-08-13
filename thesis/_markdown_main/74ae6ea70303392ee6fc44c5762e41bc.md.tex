@@ -1,0 +1,61 @@
+\markdownRendererDocumentBegin
+\markdownRendererHeadingTwo{Specific requirements}\markdownRendererInterblockSeparator
+{}\markdownRendererHeadingThree{External interfaces}\markdownRendererInterblockSeparator
+{}Users will be able to interact with the system using CLI commands to carry out simple operations that are built into the system. Here, two fundamental commands should be noted:\markdownRendererInterblockSeparator
+{}\markdownRendererUlBeginTight
+\markdownRendererUlItem \markdownRendererCodeSpan{Build}.\markdownRendererUlItemEnd 
+\markdownRendererUlItem \markdownRendererCodeSpan{Serve}: To serve and share content via a specific port.\markdownRendererUlItemEnd 
+\markdownRendererUlEndTight \markdownRendererInterblockSeparator
+{}Additionally, the system ought to alert the user any time a command it has issued contains an error because it is possible for them to accidentally type the wrong command or misspell any of these. (using buidl instead of build). Notably, unlike other systems, it will lack a recommendation system to offer hints of similar words that are actually interpreted as to assist the user in finding alternative commands, even though it will inform the user about the existence of an error that prevented the system from performing the required task.\markdownRendererInterblockSeparator
+{}\markdownRendererHeadingFour{Build}\markdownRendererInterblockSeparator
+{}The task at hand involves the conversion of Markdown files into web-based content, specifically in the form of HTML, JS, and CSS.\markdownRendererInterblockSeparator
+{}The program is designed to utilize the Command Line Interface (CLI) as an input mechanism, whereby it recognizes the command name to execute its designated task. Its output function involves generating the HTML and CSS content into an \markdownRendererCodeSpan{out} folder, in accordance with the pre-existing Markdown files. It is noteworthy that each MD file ought to generate an individual page to allow for the adaptability of transforming every file into a distinct output for the website.\markdownRendererInterblockSeparator
+{}Throughout the translation process, it is imperative that the user is kept informed of its progress. In the event of any errors, the system should prompt error messages to ensure the accuracy of the MD files, while simultaneously verifying that all necessary parameters for content and styling have been provided. Upon completion, the system should explicitly indicate the out folder path to the user.\markdownRendererInterblockSeparator
+{}Therefore, it should use the following format for each of the steps considered for the translation and building process: [Date][Page Name]: Step, where each one of these detail token corresponds to:\markdownRendererInterblockSeparator
+{}\markdownRendererUlBeginTight
+\markdownRendererUlItem Date: Specific date and time using the ISO 8601 format \markdownRendererLink{1}{https://en.wikipedia.org/wiki/ISO\markdownRendererUnderscore{}8601}{https://en.wikipedia.org/wiki/ISO_8601}{} without specifying the timezone as \markdownRendererCodeSpan{VaGo} will limit itself to use the same timezone from the host machine. For instance: \markdownRendererEmphasis{2023-04-09T14: 22:05} should be used to represent the year 2023, month April (04), day 09 at 14 hours, 22 minutes and 05 seconds.\markdownRendererUlItemEnd 
+\markdownRendererUlItem Page Name: To specify the exact page name for the URL that takes to that specific page, which is the same as the MD file name.\markdownRendererUlItemEnd 
+\markdownRendererUlItem Step: To specify the building step it's currently on, whether it is identifying the MD tokens, performing translation to HTML and/or obtaining the parameters set for the theming and styling of the given page.\markdownRendererUlItemEnd 
+\markdownRendererUlEndTight \markdownRendererInterblockSeparator
+{}On the other hand, additional parameters can be added to the command for specific output capabilities. For instance, \markdownRendererCodeSpan{no-log} should be using to omitting logging (no prompt message for every building process step) except for error and finalization message. Also, \markdownRendererCodeSpan{no-time} should be used to omit the timestamp from the steps, prompting a message with the following structure: \markdownRendererEmphasis{[Page name]:Step}, with the purpose of avoiding overloading logs and make them easier to read.\markdownRendererInterblockSeparator
+{}\markdownRendererHeadingFour{Serve}\markdownRendererInterblockSeparator
+{}The second command serves the purpose of keep the system continuously executing, hence no accepting other commands in the meantime, in order to open a port and send the already built files (by means of the previous command, \markdownRendererCodeSpan{build}) via HTTP.\markdownRendererInterblockSeparator
+{}It is important to note that this command will exclusively serve content available in the \markdownRendererCodeSpan{out} folder, therefore if the previous command hasn't been run, or if there are no files in this folder, then it won't be able to serve any content at all. Because of it, it is required that the user must first build content in order to then serve it.\markdownRendererInterblockSeparator
+{}Moreover, in addition to the behavior noted above, it must output logs to inform the user of the current status of the serving process, starting by indicating as soon as it starts reading content and initiating listening for requests, while also informing of any issue that may occur by prompting error messages.\markdownRendererInterblockSeparator
+{}Once it starts listening for requests, it should inform of any incoming request/response using the following format: [Date]: Sending [Page] to [requester IP], where each one of these token corresponds to:\markdownRendererInterblockSeparator
+{}\markdownRendererUlBeginTight
+\markdownRendererUlItem Date: Same as the one outlined for \markdownRendererCodeSpan{build} command, using the ISO 8601 format without timezone.\markdownRendererUlItemEnd 
+\markdownRendererUlItem Page: Page name as stated in the MD filename.\markdownRendererUlItemEnd 
+\markdownRendererUlItem Requester IP: Specific IP address of the incoming IP.\markdownRendererUlItemEnd 
+\markdownRendererUlEndTight \markdownRendererInterblockSeparator
+{}Additionally, an extra (optional) parameter can be provided to outline the specific port the system should open to listen for requests, instead of the default one.\markdownRendererInterblockSeparator
+{}\markdownRendererHeadingThree{Functions}\markdownRendererInterblockSeparator
+{}The following provides a more in-depth explanation of the functional areas, including full requirements.\markdownRendererInterblockSeparator
+{}\markdownRendererHeadingFour{1. Generate page}\markdownRendererInterblockSeparator
+{}\markdownRendererHeadingFive{1.1 Description and priority}\markdownRendererInterblockSeparator
+{}Create a page document by translating the content of a Markdown file to HTML, using the respective tags to map the entities of each MD block. Priority: HIGH.\markdownRendererInterblockSeparator
+{}\markdownRendererHeadingFive{1.2 Stimulus/Response sequences}\markdownRendererInterblockSeparator
+{}Stimulus: This feature must obtain the markdown files from a \markdownRendererCodeSpan{source} folder.\markdownRendererInterblockSeparator
+{}Response: Translate or generate a corresponding HTML file for each one of these MD files, outputting the result pages into an \markdownRendererCodeSpan{out} folder.\markdownRendererInterblockSeparator
+{}\markdownRendererHeadingFive{Functional requirements}\markdownRendererInterblockSeparator
+{}\markdownRendererStrongEmphasis{REQ-1}: The MD blocks must be interpreted and translate to HTML tags to generate a page accordingly to what the user has described initially. It should, at least, implement the following elements to ensure a fully accessible page as per best practices for web standards:\markdownRendererInterblockSeparator
+{}\markdownRendererUlBeginTight
+\markdownRendererUlItem Heading level 1 (\markdownRendererCodeSpan{\markdownRendererHash{}}): Heading 1 (\markdownRendererCodeSpan{<h1></h1>}).\markdownRendererUlItemEnd 
+\markdownRendererUlItem Heading level 2 (\markdownRendererCodeSpan{\markdownRendererHash{}\markdownRendererHash{}}): Heading 2 (\markdownRendererCodeSpan{<h2></h2>}).\markdownRendererUlItemEnd 
+\markdownRendererUlItem Heading level 3 (\markdownRendererCodeSpan{\markdownRendererHash{}\markdownRendererHash{}\markdownRendererHash{}}): Heading 3 (\markdownRendererCodeSpan{<h3></h3>}).\markdownRendererUlItemEnd 
+\markdownRendererUlItem Heading level 4 (\markdownRendererCodeSpan{\markdownRendererHash{}\markdownRendererHash{}\markdownRendererHash{}\markdownRendererHash{}}): Heading 4 (\markdownRendererCodeSpan{<h4></h4>}).\markdownRendererUlItemEnd 
+\markdownRendererUlItem Heading level 5 (\markdownRendererCodeSpan{\markdownRendererHash{}\markdownRendererHash{}\markdownRendererHash{}\markdownRendererHash{}\markdownRendererHash{}}): Heading 5 (\markdownRendererCodeSpan{<h5></h5>}).\markdownRendererUlItemEnd 
+\markdownRendererUlItem Heading level 6 (\markdownRendererCodeSpan{\markdownRendererHash{}\markdownRendererHash{}\markdownRendererHash{}\markdownRendererHash{}\markdownRendererHash{}\markdownRendererHash{}}): Heading 6 (\markdownRendererCodeSpan{<h6></h6>}).\markdownRendererUlItemEnd 
+\markdownRendererUlItem Text: Paragraph (\markdownRendererCodeSpan{<p></p>}).\markdownRendererUlItemEnd 
+\markdownRendererUlItem Bold text (\markdownRendererCodeSpan{**text**}): Strong (\markdownRendererCodeSpan{<strong></strong>}).\markdownRendererUlItemEnd 
+\markdownRendererUlItem Italic text (\markdownRendererCodeSpan{\markdownRendererUnderscore{}text\markdownRendererUnderscore{}}): Emphasis (\markdownRendererCodeSpan{<em></em>}).\markdownRendererUlItemEnd 
+\markdownRendererUlItem Blockquote (\markdownRendererCodeSpan{>}): Blockquote (\markdownRendererCodeSpan{<blockquote></blockquote>}).\markdownRendererUlItemEnd 
+\markdownRendererUlItem Unordered list (\markdownRendererCodeSpan{-}): Unordered list (\markdownRendererCodeSpan{<ul></ul>}) surrounding list items (\markdownRendererCodeSpan{<li></li>}).\markdownRendererUlItemEnd 
+\markdownRendererUlItem Ordered list (\markdownRendererCodeSpan{1.}, \markdownRendererCodeSpan{2.}, \markdownRendererCodeSpan{3.}, and so): Ordered list (\markdownRendererCodeSpan{<ol></ol>}) surrounding list items (\markdownRendererCodeSpan{<li></li>}).\markdownRendererUlItemEnd 
+\markdownRendererUlItem Code (\markdownRendererCodeSpan{``}): Code (\markdownRendererCodeSpan{<code></code>}).\markdownRendererUlItemEnd 
+\markdownRendererUlItem Fenced code block (\markdownRendererCodeSpan{``` ```}): Preformatted text (\markdownRendererCodeSpan{<pre></pre>}) surrounding a code block (\markdownRendererCodeSpan{<code></code>}).\markdownRendererUlItemEnd 
+\markdownRendererUlItem Link (\markdownRendererCodeSpan{[text](URL)}): Anchor tag along with the hyperlink attribute (\markdownRendererCodeSpan{<a href="URL">text</a>}).\markdownRendererUlItemEnd 
+\markdownRendererUlItem Image (\markdownRendererCodeSpan{![Alt text](URL)}): Image tag along with alt text and source attributes (\markdownRendererCodeSpan{<img alt="Alt text" src="URL"></img>}).\markdownRendererUlItemEnd 
+\markdownRendererUlEndTight \markdownRendererInterblockSeparator
+{}\markdownRendererStrongEmphasis{REQ-2}: It must verify whenever there is an input error or incorrect usage of the MD blocks, and thereby let the user know about these via error messages and halt the translation process immediately.\markdownRendererInterblockSeparator
+{}\markdownRendererStrongEmphasis{REQ-3}: Each generated page will have the same file name as the input MD file. \markdownRendererDocumentEnd

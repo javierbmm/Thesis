@@ -1,0 +1,26 @@
+        **REQ-1**: The MD blocks must be interpreted and translate to HTML tags to generate a page accordingly to what the user
+        has described initially. It should, at least, implement the following elements to ensure a fully accessible page as per
+        best practices for web standards:
+
+        * Heading level 1 (`#`): Heading 1 (`<h1></h1>`).
+        * Heading level 2 (`##`): Heading 2 (`<h2></h2>`).
+        * Heading level 3 (`###`): Heading 3 (`<h3></h3>`).
+        * Heading level 4 (`####`): Heading 4 (`<h4></h4>`).
+        * Heading level 5 (`#####`): Heading 5 (`<h5></h5>`).
+        * Heading level 6 (`######`): Heading 6 (`<h6></h6>`).
+        * Text: Paragraph (`<p></p>`).
+        * Bold text (`**text**`): Strong (`<strong></strong>`).
+        * Italic text (`_text_`): Emphasis (`<em></em>`).
+        * Blockquote (`>`): Blockquote (`<blockquote></blockquote>`).
+        * Unordered list (`-`): Unordered list (`<ul></ul>`) surrounding list items (`<li></li>`).
+        * Ordered list (`1.`, `2.`, `3.`, and so): Ordered list (`<ol></ol>`) surrounding list items (`<li></li>`).
+        * Code (` `` `): Code (`<code></code>`).
+        * Fenced code block (` ``` ``` `): Preformatted text (`<pre></pre>`) surrounding a code block (`<code></code>`).
+        * Link (`[text](URL)`): Anchor tag along with the hyperlink attribute (`<a href="URL">text</a>`).
+        * Image (`![Alt text](URL)`): Image tag along with alt text and source
+        attributes (`<img alt="Alt text" src="URL"></img>`).
+
+        **REQ-2**: It must verify whenever there is an input error or incorrect usage of the MD blocks, and thereby let the user
+        know about these via error messages and halt the translation process immediately.
+
+        **REQ-3**: Each generated page will have the same file name as the input MD file.

@@ -1,0 +1,120 @@
+%! Author = Javier Mérida
+%! Date = 2/12/2023
+
+% Preamble
+\documentclass[12pt]{report}
+\parskip=\baselineskip
+\setcounter{secnumdepth}{4}
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[smartEllipses]{markdown}
+\usepackage{setspace}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{float}
+\doublespacing
+% Graphics
+\graphicspath{ {images/} }
+
+% title
+\title{
+        {Static Site Generator}\\
+    {\large La Salle Campus Barcelona}\\
+    {\includegraphics{lasalle-logo}}
+}
+\author{Javier Mérida}
+\date{12 02 2023}
+
+% Document
+\begin{document}
+
+    \maketitle
+
+
+    \chapter{Trying out popular SSGs}\label{ch:trying-out-popular-ssgs}
+
+    The following SSGs has been chosen based on their popularity in order
+    to be tried to gather information on what the basic features for SSG
+    are.
+    It's important to notice that these are being tried in a Linux environment
+    (Linux inside Windows, thanks to WSL), installing them from scratch, using vim
+    as text editor to minimize external tools assistance to have an unbiased appreciation
+    of each one of them.
+
+    \begin{itemize}
+        \item NextJS (https://nextjs.org/)
+        \item Hugo
+        \item VuePress
+        \item Eleventy
+        \item Astro
+    \end{itemize}
+
+    % Trying NextJS
+    \markdownInput{chapters/testing-ssgs/nextjs.md}
+
+    % Trying Hugo
+    \markdownInput{chapters/testing-ssgs/hugo.md}
+
+    % Trying VuePress
+    \markdownInput{chapters/testing-ssgs/vuepress.md}
+
+    % Trying Eleventy
+    \markdownInput{chapters/testing-ssgs/eleventy.md}
+
+    % Trying Astro
+    \markdownInput{chapters/testing-ssgs/astro.md}
+
+
+    \section{Comparison Table}\label{sec:comparison-table}
+
+
+    The following table outlines the features that has been considered as most important to take into account when
+    considering static site generator.
+    Note that the purpose of this document is not to benchmark any of these features,
+    thus there is not a workload test to compare the performance of the explored SSGs. Instead, this is a simple
+    exploration on what features are stand out in order to consider as requisites to build a new SSG.
+
+
+    Also, it is important to note that the lack or the presence of any of these characteristic do not make any SSG better
+    than others, as each one of them are made for a specific purpose and shine in terms of addressing the obstacle
+    they are meant to.
+    In fact, this section must be taken as an exploration of requisites to be taken into account.
+
+
+    % Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+    \begin{table}[H]
+        \begin{tabular}{|
+                >{\columncolor[HTML]{EFEFEF}}c |c|c|c|c|c|}
+            \hline
+            \cellcolor[HTML]{C0C0C0}      & \cellcolor[HTML]{EFEFEF}NextJS & \cellcolor[HTML]{EFEFEF}Hugo & \cellcolor[HTML]{EFEFEF}VuePress & \cellcolor[HTML]{EFEFEF}Eleventy & \cellcolor[HTML]{EFEFEF}Astro \\ \hline
+            \textbf{Easy to use}          & Yes                            & Yes                          & No                               & Yes                              & Yes                           \\ \hline
+            \textbf{Flexible}             & No                             & No                           & No                               & Yes                              & Yes                           \\ \hline
+            \textbf{Strict structure}     & No                             & Yes                          & No                               & No                               & No                            \\ \hline
+            \textbf{Template system}      & No                             & Yes                          & No                               & Yes                              & Yes                           \\ \hline
+            \textbf{Themes}               & No                             & Yes                          & No                               & Yes                              & Yes                           \\ \hline
+            \textbf{Performance oriented} & Yes                            & Yes                          & NA                               & Yes                              & Yes                           \\ \hline
+            \textbf{Framework dependant}  & Yes                            & No                           & Yes                              & No                               & No                            \\ \hline
+            \textbf{Easy to install}      & Yes*                           & Yes                          & Yes*                             & Yes*                             & Yes*                          \\ \hline
+            \textbf{File-based routing}   & Yes                            & Yes                          & NA                               & Yes                              & Yes                           \\ \hline
+        \end{tabular}\label{tab:table}
+    \end{table}
+
+
+    Note*: The installation difficulty is strickly dependant of NodeJS and how `npm` addresses any missing dependency,
+    which can be (sometimes) a painful issue to solve.
+
+    % SRS
+    \chapter{Software requirements specifications}\label{ch:software-requirements-specifications}
+
+    % SRS Introduction.
+    \markdownInput{chapters/requirements/introduction.md}
+
+    % SRS Overall description
+    \markdownInput{chapters/requirements/description.md}
+
+    % SRS Specific requirements.
+    \markdownInput{chapters/requirements/requirements.md}
+
+\end{document}

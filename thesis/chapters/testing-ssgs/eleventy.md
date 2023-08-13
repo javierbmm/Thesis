@@ -1,0 +1,28 @@
+### Eleventy
+
+Eleventy is a highly adaptable website site generator that enables you to create a website using a variety of template
+languages with a multitude of settings and pre-installed features to enhance and personalize the working process and
+final results.
+
+It works with JavaScript, specifically NodeJS, making its installation a primary requirement. Once it's available in the
+environment, use `npm` to install it by doing `npm install @11ty/eleventy`.
+
+In order to start working on the new project, it's required to create a template file, which can be accomplish by using
+HTML, JavaScript, Markdown, Nunjucks, and more. Once a template is already established, create the content, called index
+file which can be done using markdown, and the content of this file will be mapped to the specified location in the
+given template, generating the output files following this structure.
+
+Eleventy is easy-to-use, framework agnostic as it does not rely on a specific framework, unlike Next.JS and VuePress,
+and comes with a plethora of features, template languages, flexibility, and the ability to add multiple well-known
+plugins and third-party tools, such as Sass for styling, to enhance the development experience. This flexibility enables
+the developer to begin working on the site with the specific set of desired tools, without additional boilerplate or the
+burden of learning new technologies, while also adapting itself to the needs of the site to be generated, i.e. bringing
+the ability to use and implement already known tooling to address very specific situations in accordance with the
+industry standard.
+
+Nonetheless, it is well-known that this flexibility increases the cognitive load associated with starting a new project,
+facing a blank sheet of paper (or in this case, a blank IDE), and deciding which tools to use to optimize both the work
+process and the final product/output. The absence of an established structure can be problematic when deciding which
+features to include, and it makes it more difficult to work on a project that has already begun because the tools used
+may be entirely different from those used on a previous project.
+

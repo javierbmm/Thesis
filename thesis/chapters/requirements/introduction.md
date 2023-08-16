@@ -81,12 +81,27 @@ the necessity of these requirements.
   MDN. https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML
 * Sun, Y. (2019). _Server-Side Rendering. In: Practical Application Development with AppRun_. Apress, Berkeley,
   CA. https://doi.org/10.1007/978-1-4842-4069-4_9
-* Taufan Fadhilah Iskandar et al (2020). _Comparison between client-side and server-side
-  rendering in the web development_ https://iopscience.iop.org/article/10.1088/1757-899X/801/1/012136/pdf
+* Taufan Fadhilah Iskandar et al (2020). _Comparison between client-side and server-side rendering in the web
+  development_ https://iopscience.iop.org/article/10.1088/1757-899X/801/1/012136/pdf
 
 ### Overall description
 
-TODO: Add a short description of the whole structure of the document (SRS).
+This chapter comprises several sections that present a series of requirements according to certain demands. These
+requirements are derived from an analysis of existing tool scopes, previous work conducted on these tools, potential
+areas for improvement under specific conditions, the current state of web development, and key considerations for
+enhancing the user experience.
+
+Subsequently, the requirements are presented in a structured manner, delineating the essential aspects of these
+requirements, including the intended input and output, the format in which these capabilities are being built, and the
+precise requisites for each individual functionality.
+
+Therefore, the primary objective of this section is to present a comprehensive list of explicit requirements associated
+with the functionalities to be developed. These requirements will be supported by detailed explanations and
+justifications for their necessity. The aim is to establish a solid and comprehensive set of needs, prioritized
+according to their importance. This will facilitate a better understanding of the development tasks required to consider
+the project as completed.
+
+
 
 
 

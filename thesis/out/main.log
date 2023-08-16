@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.1 (MiKTeX 22.10) (format=lualatex 2023.3.2)  12 MAY 2023 11:31
+This is LuaHBTeX, Version 1.15.1 (MiKTeX 22.10) (format=lualatex 2023.3.2)  16 AUG 2023 22:31
  restricted system commands enabled.
  file:line:error style messages enabled.
 **main.tex
@@ -432,34 +432,76 @@ Package markdown Info: Including markdown document "chapters/testing-ssgs/astro
 Chapter 2.
 Package markdown Info: Including markdown document "chapters/requirements/intro
 duction.md" on input line 112.
-(./_markdown_main/42deea51db9e55b1e516c1045852c1e1.md.tex [12
+(./_markdown_main/55b308081d619817e39f886675caec44.md.tex [12
 
 ] [13] [14]
-[15])
+[15]
+Overfull \hbox (7.44543pt too wide) in paragraph at lines 25--26
+[]\TU/lmr/m/it/12 What is a static site gen-er-a-tor?\TU/lmr/m/n/12 . Cloud-flar
+e. (n.d.) . https://www.cloud-
+ []
+
+
+Overfull \hbox (2.47704pt too wide) in paragraph at lines 28--29
+[]\TU/lmr/m/n/12 Wiki-me-dia Foun-da-tion. (2023a, April 11). \TU/lmr/m/it/12 Hu
+go (soft-ware)\TU/lmr/m/n/12 . Wikipedia.
+ []
+
+
+Overfull \hbox (104.27217pt too wide) in paragraph at lines 32--33
+[]\TU/lmr/m/it/12 Ac-ces-si-bil-ity prin-ci-ples\TU/lmr/m/n/12 . Web Ac-ces-si-b
+il-ity Ini-tia-tive (WAI) . https://www.w3.org/WAI/fun-
+ []
+
+
+Overfull \hbox (98.64427pt too wide) in paragraph at lines 33--34
+\TU/lmr/m/n/12 MDN. https://de-vel-oper.mozilla.org/en-US/docs/Learn/Ac-ces-si-b
+il-ity/What\TU/lmr/m/it/12 is\TU/lmr/m/n/12 accessibility 
+ []
+
+[16]
+Overfull \hbox (21.13219pt too wide) in paragraph at lines 34--35
+\TU/lmr/m/n/12 de-vel-op-ment | MDN. https://de-vel-oper.mozilla.org/en-US/docs/
+Learn/Ac-
+ []
+
+
+Overfull \hbox (29.05913pt too wide) in paragraph at lines 35--36
+\TU/lmr/m/it/12 vel-op-ment with Ap-pRun\TU/lmr/m/n/12 . Apress, Berke-ley, CA. https://doi.org/10.1007/978-
+ []
+
+[17])
 Package markdown Info: Including markdown document "chapters/requirements/descr
 iption.md" on input line 115.
- (./_markdown_main/7735303ce79496600779eaa353aa652c.md.tex [16] [17]
-[18] [19] [20] [21]
+ (./_markdown_main/7735303ce79496600779eaa353aa652c.md.tex [18] [19]
+[20] [21] [22] [23]
 Overfull \hbox (5.52504pt too wide) in paragraph at lines 26--26
 []\TU/lmr/m/n/12 Al-ter-na-tively, the sys-tem’s po-ten-tial ex-pan-sion could
  be fa-cil-i-tated through
  []
 
-[22])
+[24])
 Package markdown Info: Including markdown document "chapters/requirements/requi
 rements.md" on input line 118.
- (./_markdown_main/7b2d0ac502c0e0ff850ca7f7e9771269.md.tex [23] [24]
-[25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36]) [37]
-(C:/Users/javif/GolandProjects/awesomeProject/thesis/out/main.aux))
+ (./_markdown_main/7b2d0ac502c0e0ff850ca7f7e9771269.md.tex [25] [26]
+[27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38])
+Package markdown Info: Including markdown document "chapters/software-design/de
+sign.md" on input line 121.
+
+(./_markdown_main/346fc989d818163edc2cbb0e39636fb8.md.tex [39]
+Chapter 3.
+[40
+
+]) [41] (C:/Users/javif/GolandProjects/awesomeProject/thesis/out/main.aux))
 
 Here is how much of LuaTeX's memory you used:
- 7666 strings out of 477352
+ 7680 strings out of 477352
  100000,953878 words of node,token memory allocated
  536 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 9 attribute, 58 glue_spec,
  9 attribute_list, 2 write nodes
-   avail lists: 2:556,3:106,4:76,5:330,6:37,7:4336,8:38,9:514,10:15,11:387
- 28356 multiletter control sequences out of 65536+600000
+   avail lists: 2:556,3:106,4:76,5:331,6:37,7:4336,8:38,9:514,10:15,11:387
+ 28358 multiletter control sequences out of 65536+600000
  71 fonts using 5161087 bytes
  82i,9n,76p,1136b,344s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <//?/d:/program files/miktex/fonts/opentype/public/lm/lmmono10-regular.otf><//?/
@@ -470,9 +512,9 @@ s/miktex/fonts/opentype/public/lm/lmmono12-regular.otf><//?/d:/program files/mik
 tex/fonts/opentype/public/lm/lmroman12-bold.otf><//?/d:/program files/miktex/fon
 ts/opentype/public/lm/lmroman12-regular.otf><//?/d:/program files/miktex/fonts/o
 pentype/public/lm/lmroman17-regular.otf>
-Output written on main.pdf (38 pages, 119325 bytes).
+Output written on main.pdf (42 pages, 128767 bytes).
 
-PDF statistics: 179 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 192 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

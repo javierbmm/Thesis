@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.1 (MiKTeX 22.10) (format=lualatex 2023.3.2)  16 AUG 2023 22:31
+This is LuaHBTeX, Version 1.15.1 (MiKTeX 22.10) (format=lualatex 2023.3.2)  19 AUG 2023 11:37
  restricted system commands enabled.
  file:line:error style messages enabled.
 **main.tex
@@ -488,15 +488,16 @@ rements.md" on input line 118.
 Package markdown Info: Including markdown document "chapters/software-design/de
 sign.md" on input line 121.
 
-(./_markdown_main/346fc989d818163edc2cbb0e39636fb8.md.tex [39]
+(./_markdown_main/e05d7d7a29c0cf79272bf871c2f82d6f.md.tex [39]
 Chapter 3.
 [40
 
-]) [41] (C:/Users/javif/GolandProjects/awesomeProject/thesis/out/main.aux))
+] [41]) [42] [43]
+(C:/Users/javif/GolandProjects/awesomeProject/thesis/out/main.aux))
 
 Here is how much of LuaTeX's memory you used:
  7680 strings out of 477352
- 100000,953878 words of node,token memory allocated
+ 100000,794899 words of node,token memory allocated
  536 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 9 attribute, 58 glue_spec,
  9 attribute_list, 2 write nodes
@@ -512,9 +513,9 @@ s/miktex/fonts/opentype/public/lm/lmmono12-regular.otf><//?/d:/program files/mik
 tex/fonts/opentype/public/lm/lmroman12-bold.otf><//?/d:/program files/miktex/fon
 ts/opentype/public/lm/lmroman12-regular.otf><//?/d:/program files/miktex/fonts/o
 pentype/public/lm/lmroman17-regular.otf>
-Output written on main.pdf (42 pages, 128767 bytes).
+Output written on main.pdf (44 pages, 132182 bytes).
 
-PDF statistics: 192 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 198 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

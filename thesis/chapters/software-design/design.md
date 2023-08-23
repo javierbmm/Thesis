@@ -152,32 +152,52 @@ the aim of displaying information pertaining to the ongoing activity.
 
 ### Development strategy
 
-This project is prompt to be very simple and minimalistic in terms of development. And on top of that, the language used,
-Go, aims for simplicity on its syntax and usage. 
+This project is meant to be very simple and minimalistic in terms of development. And on top of that, the language used,
+Go, aims for simplicity on its syntax and usage.
 
 There are multiple advantages for this, such as keeping an easier readability and enhanced capacity to understand what
-is happening in a certain piece of code, but it also keeps the consistency and concrete structure over the whole project,
-which will benefit later on when multiple pieces of code (modules) are connected, and the consumer of further modules 
-must be able to easily understand its interface and purpose, as it will allow the development process to not only go faster
-but also to minimize the number of errors, and while there may appear some issues, the concreteness and simplicity will
-make it easier to overcome and conquer the upcoming challenges. 
+is happening in a certain piece of code, but it also keeps the consistency and concrete structure over the whole
+project, which will benefit later on when multiple pieces of code (modules) are connected, and the consumer of further
+modules must be able to easily understand its interface and purpose, as it will allow the development process to not
+only go faster but also to minimize the number of errors, and while there may appear some issues, the concreteness and
+simplicity will make it easier to overcome and conquer the upcoming challenges.
 
-Moreover, besides the already provided simple syntax from Go, and its recommended best practices, the development 
-process will make use of the Single-responsability principle[#], to encapsulate the multiple functionalities in 
-different modules/files, hence each one must serve to one single purpose. 
+Moreover, besides the already provided simple syntax from Go, and its recommended best practices, the development
+process will make use of the Single-responsability principle[#], to encapsulate the multiple functionalities in
+different modules/files, hence each one must serve to one single purpose.
 
-As per this, if a structure is created, and 
-there are some methods attached to this struct, these must remain in the same file. On the other hand, if the struct 
-does not have any methods, a single file must be defined for it, although it won't have any other methods or functions. 
+As per this, if a structure is created, and there are some methods attached to this struct, these must remain in the
+same file. On the other hand, if the struct does not have any methods, a single file must be defined for it, although it
+won't have any other methods or functions.
 
-Moreover, multiple functions that share or serve a single purpose, must be created in the same file. 
+Moreover, multiple functions that share or serve a single purpose, must be created in the same file.
 
+Similarly, it is absolutely forbidden the creation of modules with ambiguous names such as 'util', where its purpose and
+functionalities are not clear for the consumer. The module's name must explicitly reflect its purpose, and if the
+collection of variables, functions and methods within it are not coherent, then the whole existence of this module must
+be re-evaluated in order to follow a semantic meaning.
 
-
-It is important to note that during the description of these strategies, the word "class" has not been mentioned, and 
-there is a relevant reason for that, which will be explained in the next topic. 
-
+It is important to note that during the description of these strategies, the word "class" has not been mentioned, and
+there is a relevant reason for that, which will be explained in the next topic.
 
 #### Go vs OOP
 
-## Open questions
+Go, the programming language, by design, is meant to be Object Oriented Programming and at the same time it is not. This
+limitation arises from the fact that, while it is feasible to construct a class-like abstraction of a tangible entity
+using structures and methods, it lacks support for hierarchical relationships. Consequently, this necessitates that
+developers employ abstractions at a single layer, simplifying the code by avoiding the accumulation of excessive levels
+of complexity, and instead favoring the usage of composition.
+
+Although certain teams may view this as a drawback, it is important to note that this particular attribute aligns
+seamlessly with the objectives of the project, which prioritize simplicity and minimalistic code. This assertion is
+supported by the aforementioned reasons.
+
+Furthermore, it provides support for dynamic interfaces, which implies that there is no need to statically declare the
+objects that implement specific interfaces. Instead, the interpretation of these interfaces occurs dynamically when the
+corresponding methods are implemented.
+
+In order to maintain simplicity in software interfaces, it is imperative to adhere to the design principle of limiting
+the number of methods to a maximum of five. Additionally, the Interface Segregation principle should be observed to
+prevent the creation of unnecessary interfaces. For an interface to be justified, it must possess two essential
+qualities: a semantic purpose or meaning for its existence, and a clear enhancement to the code that cannot be achieved
+through any other means.

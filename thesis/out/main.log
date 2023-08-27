@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.1 (MiKTeX 22.10) (format=lualatex 2023.3.2)  23 AUG 2023 23:29
+This is LuaHBTeX, Version 1.15.1 (MiKTeX 22.10) (format=lualatex 2023.3.2)  28 AUG 2023 00:41
  restricted system commands enabled.
  file:line:error style messages enabled.
 **main.tex
@@ -486,25 +486,41 @@ rements.md" on input line 118.
  (./_markdown_main/7b2d0ac502c0e0ff850ca7f7e9771269.md.tex [25] [26]
 [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38])
 Package markdown Info: Including markdown document "chapters/software-design/de
-sign.md" on input line 121.
+sign.md" on input line 122.
 
-(./_markdown_main/870052e6765349f2144b372b7f6544cb.md.tex [39]
+(./_markdown_main/ae75ba484f56148dff240b22b811a268.md.tex [39]
 Chapter 3.
 [40
 
-] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50]) [51]
+] [41] [42] [43] [44] [45]
+<images//../../images/design/Build.png, id=154, 1060.96375pt x 437.635pt>
+File: images//../../images/design/Build.png Graphic file (type png)
+<use images//../../images/design/Build.png>
+Package luatex.def Info: images//../../images/design/Build.png  used on input l
+ine 43.
+(luatex.def)             Requested size: 390.0pt x 160.86732pt.
+ [46] [47<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../
+images/design/Build.png>]
+<images//../../images/design/Serve.png, id=162, 1069.9975pt x 433.62pt>
+File: images//../../images/design/Serve.png Graphic file (type png)
+<use images//../../images/design/Serve.png>
+Package luatex.def Info: images//../../images/design/Serve.png  used on input l
+ine 51.
+(luatex.def)             Requested size: 390.0pt x 158.04832pt.
+ [48] [49<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../
+images/design/Serve.png>] [50] [51]) [52] [53]
 (C:/Users/javif/GolandProjects/awesomeProject/thesis/out/main.aux))
 
 Here is how much of LuaTeX's memory you used:
- 7680 strings out of 477352
+ 7709 strings out of 477352
  100000,953878 words of node,token memory allocated
  536 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 9 attribute, 58 glue_spec,
  9 attribute_list, 2 write nodes
    avail lists: 2:556,3:106,4:76,5:333,6:37,7:4336,8:38,9:514,10:15,11:387
- 28358 multiletter control sequences out of 65536+600000
+ 28375 multiletter control sequences out of 65536+600000
  71 fonts using 5161087 bytes
- 82i,9n,76p,1136b,344s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 82i,9n,76p,1136b,359s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <//?/d:/program files/miktex/fonts/opentype/public/lm/lmmono10-regular.otf><//?/
 d:/program files/miktex/fonts/opentype/public/lm/lmroman7-regular.otf><//?/d:/pr
 ogram files/miktex/fonts/opentype/public/lm/lmroman8-regular.otf><//?/d:/program
@@ -513,9 +529,9 @@ s/miktex/fonts/opentype/public/lm/lmmono12-regular.otf><//?/d:/program files/mik
 tex/fonts/opentype/public/lm/lmroman12-bold.otf><//?/d:/program files/miktex/fon
 ts/opentype/public/lm/lmroman12-regular.otf><//?/d:/program files/miktex/fonts/o
 pentype/public/lm/lmroman17-regular.otf>
-Output written on main.pdf (52 pages, 148600 bytes).
+Output written on main.pdf (54 pages, 179531 bytes).
 
-PDF statistics: 223 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 233 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

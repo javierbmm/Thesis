@@ -111,7 +111,16 @@ the newly parsed HTML content, but it will also generate new files specifically 
 output folder. The encapsulation of the described functionality will be implemented within the `Build` function, which
 will accept the input folder location, template file, and output folder as parameters.
 
-### Serve
+Both the Parser and Generator will work together in the same phase named as "Build", which consists mainly on taking the
+Markdown content and template in order to build the HTML content. This same name will be then used by the CLI to
+indicate the software to perform these actions.
+
+The image belows provides a graphical explanation about the interaction between these modules along with the input
+folder, template and output folder.
+
+![Fig 1. Build process using Parser and Generator modules](../../images/design/Build.png "Build process using Parser and Generator modules.")
+
+### Server
 
 This module is pretty simple as its main purpose is to open a port on localhost to start listening to requests, which
 will be then managed by a router using the `/[target]` URL format.
@@ -130,6 +139,13 @@ individual making the request.
 
 If a file name is not discovered, the system should generate a 404 page. This page can either be provided by the user in
 advance or a default page can be used.
+
+Similarly to previous modules (generator and parser) used in the Build stage, Server and Router are meant to be used
+together to accomplish another task: Serve. This will be on charge of managing every incoming HTTP request and handle
+them accordingly to the target URL, whether this exist as a page in the output folder or not. The following diagram 
+provides more context on the relationship between these as to provide guidance on their interaction and desired outcome. 
+
+![Fig 1. Serve process using Server and Router modules](../../images/design/Serve.png "Serve process using Server and Router modules")
 
 ### Logger
 

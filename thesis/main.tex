@@ -12,10 +12,10 @@
 \usepackage{setspace}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{float}
-\doublespacing
+\singlespacing
 % Graphics
 \graphicspath{ {images/} }
-
+\floatplacement{figure}{H}
 % title
 \title{
         {Static Site Generator}\\
@@ -117,11 +117,15 @@
     % SRS Specific requirements.
     \markdownInput{chapters/requirements/requirements.md}
 
-    \setkeys{Gin}{width=1.0\linewidth}
+    \setkeys{Gin}{width=1\linewidth}
     % Software design
     \markdownInput{chapters/software-design/design.md}
 
     % Used technologies
     \markdownInput{chapters/used-tech/technologies.md}
+
+    \setkeys{Gin}{width=0.7\linewidth}
+    % Implementation
+    \markdownInput{chapters/implementation/implementation.md}
 
 \end{document}

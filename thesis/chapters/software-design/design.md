@@ -142,10 +142,10 @@ advance or a default page can be used.
 
 Similarly to previous modules (generator and parser) used in the Build stage, Server and Router are meant to be used
 together to accomplish another task: Serve. This will be on charge of managing every incoming HTTP request and handle
-them accordingly to the target URL, whether this exist as a page in the output folder or not. The following diagram 
-provides more context on the relationship between these as to provide guidance on their interaction and desired outcome. 
+them accordingly to the target URL, whether this exist as a page in the output folder or not. The following diagram
+provides more context on the relationship between these as to provide guidance on their interaction and desired outcome.
 
-![Fig 1. Serve process using Server and Router modules](../../images/design/Serve.png "Serve process using Server and Router modules")
+![Fig 2. Serve process using Server and Router modules](../../images/design/Serve.png "Serve process using Server and Router modules")
 
 ### Logger
 
@@ -165,6 +165,33 @@ Hence, it is appropriate to designate the logger responsible for the generation 
 and the logger responsible for serving and routing as `ServeLogger`. On the contrary, in order to enhance simplicity and
 enhance readability, both loggers will employ a uniform interface to provide an equivalent Log function, which serves
 the aim of displaying information pertaining to the ongoing activity.
+
+### CLI
+
+The command line interface of VaGo is designed to ensure user-friendliness, clarity, and comprehensive documentation.
+This objective will be achieved by utilizing the urfave/cli package (as discussed in the subsequent chapter), which
+offers functionalities for implementing command-line interface (CLI) commands with flags, storing parameters in
+variables for future utilization, abbreviated commands, aid with documentation help, and further capabilities.
+
+According to this, the package will incorporate two primary commands: Build and Serve. The initial option, "--no-log,"
+will indicate to the system that it should refrain from generating any informational logs. Additionally, the flag "
+--no-time" will be employed to exclude timestamps from the logs, hence preventing an excessive display of distracting
+information and numerical values on the screen. Subsequently, the system will execute all the necessary procedures to
+construct webpages from markdown files, as observed in the generator and parser phases.
+
+On the contrary, the serve command will incorporate a flag, namely --port, which allows for the specification of a
+particular port to be utilized by the system for serving files. The default port for this will be 8080. Subsequently,
+the system will execute the necessary operations during the Serve phase.
+
+It is noteworthy that for both commands, the system will retrieve information from the configuration files in order to
+access the necessary specifics for input and output files, styles, theming, homepage, and any other pertinent
+information required for the effective and adaptable execution of the software.
+
+Additionally, the subsequent graphic illustrates an overview of the procedure undertaken by the Command Line Interface (
+CLI) to obtain the user's request, parse the configuration file (in yaml format), and choose the appropriate phase to
+execute, incorporating the user-specified flags as variables.
+
+![Fig 3. CLI processing provided command and reading configuration YAML file.](../../images/design/CLI.png "CLI processing provided command and reading configuration YAML file.")
 
 ### Development strategy
 

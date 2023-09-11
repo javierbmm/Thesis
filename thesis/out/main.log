@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.1 (MiKTeX 22.10) (format=lualatex 2023.3.2)  12 SEP 2023 00:45
+This is LuaHBTeX, Version 1.15.1 (MiKTeX 22.10) (format=lualatex 2023.3.2)  12 SEP 2023 01:30
  restricted system commands enabled.
  file:line:error style messages enabled.
 **main.tex
@@ -414,20 +414,28 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {C:/Users/javif/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}<./images//lasa
 lle-logo.png>]
+(C:/Users/javif/GolandProjects/awesomeProject/thesis/out/main.toc [1
+
+] [2]
+[3])
+\tf@toc=\write6
+
+\openout6 = main.toc
+ [4]
 Chapter 1.
 Package markdown Info: Including markdown document "chapters/testing-ssgs/nextj
-s.md" on input line 59.
-(./_markdown_main/8437b8382ff58027c77541e908ad36da.md.tex [1
+s.md" on input line 60.
+(./_markdown_main/8437b8382ff58027c77541e908ad36da.md.tex [5
 
 ])
 Package markdown Info: Including markdown document "chapters/testing-ssgs/hugo.
-md" on input line 62.
+md" on input line 63.
 
-(./_markdown_main/a6682c2c5aba098d256e4422df9718f2.md.tex [2])
+(./_markdown_main/a6682c2c5aba098d256e4422df9718f2.md.tex [6])
 Package markdown Info: Including markdown document "chapters/testing-ssgs/vuepr
-ess.md" on input line 65.
+ess.md" on input line 66.
 
-(./_markdown_main/1a32729159d49775edbd3d707b503cb0.md.tex [3]
+(./_markdown_main/1a32729159d49775edbd3d707b503cb0.md.tex [7]
 Overfull \hbox (6.60718pt too wide) in paragraph at lines 4--4
 \TU/lmr/m/n/12 CLI com-mand \TU/lmtt/m/n/12 npx create-vuepress-site [optionalDi
 rectoryName]\TU/lmr/m/n/12 , and
@@ -435,24 +443,24 @@ rectoryName]\TU/lmr/m/n/12 , and
 
 )
 Package markdown Info: Including markdown document "chapters/testing-ssgs/eleve
-nty.md" on input line 68.
- (./_markdown_main/77092910ce3ea2b70fd8cf610e3fc8d4.md.tex [4])
+nty.md" on input line 69.
+ (./_markdown_main/77092910ce3ea2b70fd8cf610e3fc8d4.md.tex [8])
 Package markdown Info: Including markdown document "chapters/testing-ssgs/astro
-.md" on input line 71.
+.md" on input line 72.
 
-(./_markdown_main/67d5651fbd857854a1562c9bef37c28e.md.tex [5]) [6] [7]
+(./_markdown_main/67d5651fbd857854a1562c9bef37c28e.md.tex [9]) [10] [11]
 Chapter 2.
 Package markdown Info: Including markdown document "chapters/requirements/intro
-duction.md" on input line 120.
-(./_markdown_main/55b308081d619817e39f886675caec44.md.tex [8
+duction.md" on input line 121.
+(./_markdown_main/55b308081d619817e39f886675caec44.md.tex [12
 
-] [9]
+] [13]
 Overfull \hbox (7.44543pt too wide) in paragraph at lines 25--26
 []\TU/lmr/m/it/12 What is a static site gen-er-a-tor?\TU/lmr/m/n/12 . Cloud-flar
 e. (n.d.) . https://www.cloud-
  []
 
-[10]
+[14]
 Overfull \hbox (2.47704pt too wide) in paragraph at lines 28--29
 []\TU/lmr/m/n/12 Wiki-me-dia Foun-da-tion. (2023a, April 11). \TU/lmr/m/it/12 Hu
 go (soft-ware)\TU/lmr/m/n/12 . Wikipedia.
@@ -481,79 +489,79 @@ Overfull \hbox (29.05913pt too wide) in paragraph at lines 35--36
 \TU/lmr/m/it/12 vel-op-ment with Ap-pRun\TU/lmr/m/n/12 . Apress, Berke-ley, CA. https://doi.org/10.1007/978-
  []
 
-[11])
+[15])
 Package markdown Info: Including markdown document "chapters/requirements/descr
-iption.md" on input line 123.
- (./_markdown_main/7735303ce79496600779eaa353aa652c.md.tex [12] [13]
-[14] [15]
+iption.md" on input line 124.
+ (./_markdown_main/7735303ce79496600779eaa353aa652c.md.tex [16] [17]
+[18] [19]
 Overfull \hbox (5.52504pt too wide) in paragraph at lines 26--26
 []\TU/lmr/m/n/12 Al-ter-na-tively, the sys-tem’s po-ten-tial ex-pan-sion could
  be fa-cil-i-tated through
  []
 
-[16])
+[20])
 Package markdown Info: Including markdown document "chapters/requirements/requi
-rements.md" on input line 126.
- (./_markdown_main/7b2d0ac502c0e0ff850ca7f7e9771269.md.tex [17] [18]
-[19] [20] [21] [22] [23] [24] [25])
+rements.md" on input line 127.
+ (./_markdown_main/7b2d0ac502c0e0ff850ca7f7e9771269.md.tex [21] [22]
+[23] [24] [25] [26] [27] [28] [29])
 Package markdown Info: Including markdown document "chapters/software-design/de
-sign.md" on input line 130.
+sign.md" on input line 131.
 
-(./_markdown_main/9356e3cfdee25cfb7334c61f509be9af.md.tex [26]
+(./_markdown_main/9356e3cfdee25cfb7334c61f509be9af.md.tex [30]
 Chapter 3.
-[27
+[31
 
-] [28] [29] [30]
-<images//../../images/design/Build.png, id=108, 1060.96375pt x 437.635pt>
+] [32] [33] [34]
+<images//../../images/design/Build.png, id=120, 1060.96375pt x 437.635pt>
 File: images//../../images/design/Build.png Graphic file (type png)
 <use images//../../images/design/Build.png>
 Package luatex.def Info: images//../../images/design/Build.png  used on input l
 ine 43.
 (luatex.def)             Requested size: 390.0pt x 160.86732pt.
- [31] [32<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../
+ [35] [36<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../
 images/design/Build.png>]
-<images//../../images/design/Serve.png, id=116, 1069.9975pt x 433.62pt>
+<images//../../images/design/Serve.png, id=128, 1069.9975pt x 433.62pt>
 File: images//../../images/design/Serve.png Graphic file (type png)
 <use images//../../images/design/Serve.png>
 Package luatex.def Info: images//../../images/design/Serve.png  used on input l
 ine 51.
 (luatex.def)             Requested size: 390.0pt x 158.04832pt.
- [33<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
-s/design/Serve.png>] [34]
-<images//../../images/design/CLI.png, id=124, 899.36pt x 808.01875pt>
+ [37<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
+s/design/Serve.png>] [38]
+<images//../../images/design/CLI.png, id=136, 899.36pt x 808.01875pt>
 File: images//../../images/design/CLI.png Graphic file (type png)
 <use images//../../images/design/CLI.png>
 Package luatex.def Info: images//../../images/design/CLI.png  used on input lin
 e 63.
 (luatex.def)             Requested size: 390.0pt x 350.38802pt.
 
-[35] [36<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../i
-mages/design/CLI.png>] [37])
+[39] [40<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../i
+mages/design/CLI.png>] [41])
 Package markdown Info: Including markdown document "chapters/used-tech/technolo
-gies.md" on input line 133.
+gies.md" on input line 134.
 
-(./_markdown_main/7733963f08c883214b8715dc4ea6e0c1.md.tex [38]
+(./_markdown_main/7733963f08c883214b8715dc4ea6e0c1.md.tex [42]
 Chapter 4.
-[39
-
-] [40] [41])
-Package markdown Info: Including markdown document "chapters/implementation/imp
-lementation.md" on input line 137.
- (./_markdown_main/f8de7af1cac1183595e58f8a6f3931de.md.tex
-[42]
-Chapter 5.
 [43
 
+] [44] [45])
+Package markdown Info: Including markdown document "chapters/implementation/imp
+lementation.md" on input line 138.
+ (./_markdown_main/f8de7af1cac1183595e58f8a6f3931de.md.tex
+[46]
+Chapter 5.
+[47
+
 ]
-<images//../../images/implementation/out.png, id=154, 295.1025pt x 391.4625pt>
+<images//../../images/implementation/out.png, id=166, 295.1025pt x 391.4625pt>
 File: images//../../images/implementation/out.png Graphic file (type png)
 <use images//../../images/implementation/out.png>
 Package luatex.def Info: images//../../images/implementation/out.png  used on i
 nput line 23.
 (luatex.def)             Requested size: 272.99881pt x 362.1509pt.
- [44] [45<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../
+ [48] [49<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../
 images/implementation/out.png>]
-<images//../../images/implementation/Separation.png, id=162, 510.90875pt x 614.
+<images//../../images/implementation/Separation.png, id=174, 510.90875pt x 614.
 295pt>
 File: images//../../images/implementation/Separation.png Graphic file (type png
 )
@@ -561,9 +569,9 @@ File: images//../../images/implementation/Separation.png Graphic file (type png
 Package luatex.def Info: images//../../images/implementation/Separation.png  us
 ed on input line 28.
 (luatex.def)             Requested size: 272.99881pt x 328.23683pt.
- [46] [47<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../
+ [50] [51<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../
 images/implementation/Separation.png>]
-<images//../../images/implementation/contenttracker.png, id=170, 362.35374pt x 
+<images//../../images/implementation/contenttracker.png, id=183, 362.35374pt x 
 122.4575pt>
 File: images//../../images/implementation/contenttracker.png Graphic file (type
  png)
@@ -571,7 +579,7 @@ File: images//../../images/implementation/contenttracker.png Graphic file (type
 Package luatex.def Info: images//../../images/implementation/contenttracker.png
   used on input line 32.
 (luatex.def)             Requested size: 272.99881pt x 92.26143pt.
-<images//../../images/implementation/Parser.png, id=171, 477.785pt x 702.625pt>
+<images//../../images/implementation/Parser.png, id=184, 477.785pt x 702.625pt>
 
 File: images//../../images/implementation/Parser.png Graphic file (type png)
 <use images//../../images/implementation/Parser.png>
@@ -579,10 +587,10 @@ Package luatex.def Info: images//../../images/implementation/Parser.png  used o
 n input line 36.
 (luatex.def)             Requested size: 272.99881pt x 401.46532pt.
 
-[48<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../images
-/implementation/contenttracker.png>] [49<C:/Users/javif/GolandProjects/awesomePr
+[52<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../images
+/implementation/contenttracker.png>] [53<C:/Users/javif/GolandProjects/awesomePr
 oject/thesis/out/images//../../images/implementation/Parser.png>]
-<images//../../images/implementation/extractast.png, id=180, 791.95876pt x 500.
+<images//../../images/implementation/extractast.png, id=193, 791.95876pt x 500.
 87125pt>
 File: images//../../images/implementation/extractast.png Graphic file (type png
 )
@@ -590,7 +598,7 @@ File: images//../../images/implementation/extractast.png Graphic file (type png
 Package luatex.def Info: images//../../images/implementation/extractast.png  us
 ed on input line 40.
 (luatex.def)             Requested size: 272.99881pt x 172.65555pt.
-<images//../../images/implementation/parsemarkdown.png, id=181, 433.62pt x 384.
+<images//../../images/implementation/parsemarkdown.png, id=194, 433.62pt x 384.
 43625pt>
 File: images//../../images/implementation/parsemarkdown.png Graphic file (type 
 png)
@@ -598,10 +606,10 @@ png)
 Package luatex.def Info: images//../../images/implementation/parsemarkdown.png 
  used on input line 42.
 (luatex.def)             Requested size: 272.99881pt x 242.0436pt.
- [50<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
-s/implementation/extractast.png>] [51<C:/Users/javif/GolandProjects/awesomeProje
+ [54<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
+s/implementation/extractast.png>] [55<C:/Users/javif/GolandProjects/awesomeProje
 ct/thesis/out/images//../../images/implementation/parsemarkdown.png>]
-<images//../../images/implementation/buildpage.png, id=191, 602.25pt x 213.7987
+<images//../../images/implementation/buildpage.png, id=203, 602.25pt x 213.7987
 5pt>
 File: images//../../images/implementation/buildpage.png Graphic file (type png)
 
@@ -609,7 +617,7 @@ File: images//../../images/implementation/buildpage.png Graphic file (type png)
 Package luatex.def Info: images//../../images/implementation/buildpage.png  use
 d on input line 49.
 (luatex.def)             Requested size: 272.99881pt x 96.91646pt.
-<images//../../images/implementation/buildpages.png, id=192, 650.43pt x 622.325
+<images//../../images/implementation/buildpages.png, id=204, 650.43pt x 622.325
 pt>
 File: images//../../images/implementation/buildpages.png Graphic file (type png
 )
@@ -617,9 +625,9 @@ File: images//../../images/implementation/buildpages.png Graphic file (type png
 Package luatex.def Info: images//../../images/implementation/buildpages.png  us
 ed on input line 50.
 (luatex.def)             Requested size: 272.99881pt x 261.20378pt.
- [52<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
+ [56<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
 s/implementation/buildpage.png>]
-<images//../../images/implementation/buildstyle.png, id=197, 665.48625pt x 206.
+<images//../../images/implementation/buildstyle.png, id=209, 665.48625pt x 206.
 7725pt>
 File: images//../../images/implementation/buildstyle.png Graphic file (type png
 )
@@ -627,9 +635,9 @@ File: images//../../images/implementation/buildstyle.png Graphic file (type png
 Package luatex.def Info: images//../../images/implementation/buildstyle.png  us
 ed on input line 54.
 (luatex.def)             Requested size: 272.99881pt x 84.82458pt.
- [53<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
+ [57<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
 s/implementation/buildpages.png>]
-<images//../../images/implementation/buildstyles.png, id=202, 786.94pt x 441.65
+<images//../../images/implementation/buildstyles.png, id=214, 786.94pt x 441.65
 pt>
 File: images//../../images/implementation/buildstyles.png Graphic file (type pn
 g)
@@ -637,19 +645,19 @@ g)
 Package luatex.def Info: images//../../images/implementation/buildstyles.png  u
 sed on input line 55.
 (luatex.def)             Requested size: 272.99881pt x 153.21178pt.
- [54<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
+ [58<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
 s/implementation/buildstyle.png><C:/Users/javif/GolandProjects/awesomeProject/th
 esis/out/images//../../images/implementation/buildstyles.png>]
-<images//../../images/implementation/serve.png, id=208, 829.0975pt x 316.18124p
+<images//../../images/implementation/serve.png, id=220, 829.0975pt x 316.18124p
 t>
 File: images//../../images/implementation/serve.png Graphic file (type png)
 <use images//../../images/implementation/serve.png>
 Package luatex.def Info: images//../../images/implementation/serve.png  used on
  input line 62.
 (luatex.def)             Requested size: 272.99881pt x 104.10855pt.
- [55<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
+ [59<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
 s/implementation/serve.png>]
-<images//../../images/implementation/RouterLogic.png, id=213, 365.365pt x 475.7
+<images//../../images/implementation/RouterLogic.png, id=225, 365.365pt x 475.7
 775pt>
 File: images//../../images/implementation/RouterLogic.png Graphic file (type pn
 g)
@@ -657,24 +665,24 @@ g)
 Package luatex.def Info: images//../../images/implementation/RouterLogic.png  u
 sed on input line 65.
 (luatex.def)             Requested size: 272.99881pt x 355.51822pt.
-<images//../../images/implementation/router.png, id=214, 635.37375pt x 661.4712
+<images//../../images/implementation/router.png, id=226, 635.37375pt x 661.4712
 5pt>
 File: images//../../images/implementation/router.png Graphic file (type png)
 <use images//../../images/implementation/router.png>
 Package luatex.def Info: images//../../images/implementation/router.png  used o
 n input line 66.
 (luatex.def)             Requested size: 272.99881pt x 284.21513pt.
- [56<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
-s/implementation/RouterLogic.png>] [57<C:/Users/javif/GolandProjects/awesomeProj
+ [60<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
+s/implementation/RouterLogic.png>] [61<C:/Users/javif/GolandProjects/awesomeProj
 ect/thesis/out/images//../../images/implementation/router.png>]
-<images//../../images/implementation/loggeri.png, id=223, 246.9225pt x 260.975p
+<images//../../images/implementation/loggeri.png, id=236, 246.9225pt x 260.975p
 t>
 File: images//../../images/implementation/loggeri.png Graphic file (type png)
 <use images//../../images/implementation/loggeri.png>
 Package luatex.def Info: images//../../images/implementation/loggeri.png  used 
 on input line 73.
 (luatex.def)             Requested size: 272.99881pt x 288.55077pt.
-<images//../../images/implementation/prefixeri.png, id=224, 347.2975pt x 112.42
+<images//../../images/implementation/prefixeri.png, id=237, 347.2975pt x 112.42
 pt>
 File: images//../../images/implementation/prefixeri.png Graphic file (type png)
 
@@ -682,9 +690,9 @@ File: images//../../images/implementation/prefixeri.png Graphic file (type png)
 Package luatex.def Info: images//../../images/implementation/prefixeri.png  use
 d on input line 77.
 (luatex.def)             Requested size: 272.99881pt x 88.3734pt.
- [58<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
+ [62<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
 s/implementation/loggeri.png>]
-<images//../../images/implementation/generatorlogger.png, id=229, 757.83125pt x
+<images//../../images/implementation/generatorlogger.png, id=242, 757.83125pt x
  388.45125pt>
 File: images//../../images/implementation/generatorlogger.png Graphic file (typ
 e png)
@@ -693,9 +701,9 @@ Package luatex.def Info: images//../../images/implementation/generatorlogger.pn
 g  used on input line 82.
 (luatex.def)             Requested size: 272.99881pt x 139.93716pt.
 
-[59<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../images
+[63<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../images
 /implementation/prefixeri.png>]
-<images//../../images/implementation/generatorprefixer.png, id=234, 642.4pt x 4
+<images//../../images/implementation/generatorprefixer.png, id=247, 642.4pt x 4
 11.5375pt>
 File: images//../../images/implementation/generatorprefixer.png Graphic file (t
 ype png)
@@ -703,7 +711,7 @@ ype png)
 Package luatex.def Info: images//../../images/implementation/generatorprefixer.
 png  used on input line 85.
 (luatex.def)             Requested size: 272.99881pt x 174.89171pt.
-<images//../../images/implementation/GeneratorLoggerShape.png, id=235, 461.725p
+<images//../../images/implementation/GeneratorLoggerShape.png, id=248, 461.725p
 t x 284.06125pt>
 File: images//../../images/implementation/GeneratorLoggerShape.png Graphic file
  (type png)
@@ -711,19 +719,19 @@ File: images//../../images/implementation/GeneratorLoggerShape.png Graphic file
 Package luatex.def Info: images//../../images/implementation/GeneratorLoggerSha
 pe.png  used on input line 86.
 (luatex.def)             Requested size: 272.99881pt x 167.95442pt.
- [60<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
+ [64<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
 s/implementation/generatorlogger.png><C:/Users/javif/GolandProjects/awesomeProje
 ct/thesis/out/images//../../images/implementation/generatorprefixer.png>]
-<images//../../images/implementation/clibuild.png, id=242, 1014.79124pt x 696.6
+<images//../../images/implementation/clibuild.png, id=254, 1014.79124pt x 696.6
 025pt>
 File: images//../../images/implementation/clibuild.png Graphic file (type png)
 <use images//../../images/implementation/clibuild.png>
 Package luatex.def Info: images//../../images/implementation/clibuild.png  used
  on input line 97.
 (luatex.def)             Requested size: 272.99881pt x 187.39429pt.
- [61<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
+ [65<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
 s/implementation/GeneratorLoggerShape.png>]
-<images//../../images/implementation/cliserve.png, id=247, 770.88pt x 497.86pt>
+<images//../../images/implementation/cliserve.png, id=259, 770.88pt x 497.86pt>
 
 File: images//../../images/implementation/cliserve.png Graphic file (type png)
 <use images//../../images/implementation/cliserve.png>
@@ -731,17 +739,17 @@ Package luatex.def Info: images//../../images/implementation/cliserve.png  used
  on input line 106.
 (luatex.def)             Requested size: 272.99881pt x 176.31232pt.
 
-[62<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../images
+[66<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../images
 /implementation/clibuild.png><C:/Users/javif/GolandProjects/awesomeProject/thesi
 s/out/images//../../images/implementation/cliserve.png>]
-<images//../../images/implementation/clihelp.png, id=253, 1051.93pt x 443.6575p
+<images//../../images/implementation/clihelp.png, id=265, 1051.93pt x 443.6575p
 t>
 File: images//../../images/implementation/clihelp.png Graphic file (type png)
 <use images//../../images/implementation/clihelp.png>
 Package luatex.def Info: images//../../images/implementation/clihelp.png  used 
 on input line 109.
 (luatex.def)             Requested size: 272.99881pt x 115.13837pt.
-<images//../../images/implementation/clibuildhelp.png, id=254, 1102.1175pt x 36
+<images//../../images/implementation/clibuildhelp.png, id=266, 1102.1175pt x 36
 3.3575pt>
 File: images//../../images/implementation/clibuildhelp.png Graphic file (type p
 ng)
@@ -749,7 +757,7 @@ ng)
 Package luatex.def Info: images//../../images/implementation/clibuildhelp.png  
 used on input line 110.
 (luatex.def)             Requested size: 272.99881pt x 90.00194pt.
-<images//../../images/implementation/cliservehelp.png, id=255, 843.15pt x 333.2
+<images//../../images/implementation/cliservehelp.png, id=267, 843.15pt x 333.2
 45pt>
 File: images//../../images/implementation/cliservehelp.png Graphic file (type p
 ng)
@@ -757,10 +765,10 @@ ng)
 Package luatex.def Info: images//../../images/implementation/cliservehelp.png  
 used on input line 111.
 (luatex.def)             Requested size: 272.99881pt x 107.90163pt.
- [63<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
+ [67<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
 s/implementation/clihelp.png><C:/Users/javif/GolandProjects/awesomeProject/thesi
 s/out/images//../../images/implementation/clibuildhelp.png>]
-<images//../../images/implementation/clibuildaction.png, id=261, 533.995pt x 14
+<images//../../images/implementation/clibuildaction.png, id=273, 533.995pt x 14
 7.55125pt>
 File: images//../../images/implementation/clibuildaction.png Graphic file (type
  png)
@@ -768,7 +776,7 @@ File: images//../../images/implementation/clibuildaction.png Graphic file (type
 Package luatex.def Info: images//../../images/implementation/clibuildaction.png
   used on input line 115.
 (luatex.def)             Requested size: 272.99881pt x 75.437pt.
-<images//../../images/implementation/cliserveaction.png, id=262, 533.995pt x 14
+<images//../../images/implementation/cliserveaction.png, id=274, 533.995pt x 14
 1.52875pt>
 File: images//../../images/implementation/cliserveaction.png Graphic file (type
  png)
@@ -776,114 +784,137 @@ File: images//../../images/implementation/cliserveaction.png Graphic file (type
 Package luatex.def Info: images//../../images/implementation/cliserveaction.png
   used on input line 116.
 (luatex.def)             Requested size: 272.99881pt x 72.35794pt.
-) [64<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../imag
+) [68<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../imag
 es/implementation/cliservehelp.png><C:/Users/javif/GolandProjects/awesomeProject
 /thesis/out/images//../../images/implementation/clibuildaction.png>] (./chapter
-s/results/results.tex [65<C:/Users/javif/GolandProjects/awesomeProject/thesis/ou
+s/results/results.tex [69<C:/Users/javif/GolandProjects/awesomeProject/thesis/ou
 t/images//../../images/implementation/cliserveaction.png>]
 Chapter 6.
-
-Overfull \hbox (79.67944pt too wide) in paragraph at lines 43--43
-[]    \TU/lmtt/m/n/12 >> ...by using additional greater-than signs right next to
- each other...[] 
- []
-
-[66
+[70
 
 ]
-Underfull \vbox (badness 10000) detected at line 88
+Underfull \vbox (badness 10000) detected at line 89
  []
 
 
-Underfull \vbox (badness 10000) detected at line 88
+Underfull \vbox (badness 10000) detected at line 89
  []
 
-[67] [68]
-<images///results/vagobuild.png, id=281, 757.83125pt x 152.57pt>
+[71] [72]
+<images///results/vagobuild.png, id=294, 757.83125pt x 152.57pt>
 File: images///results/vagobuild.png Graphic file (type png)
 <use images///results/vagobuild.png>
-Package luatex.def Info: images///results/vagobuild.png  used on input line 136
+Package luatex.def Info: images///results/vagobuild.png  used on input line 137
 .
 (luatex.def)             Requested size: 390.0pt x 78.51738pt.
- [69<./images///results/vagobuild.png>]
-Overfull \hbox (166.19934pt too wide) in paragraph at lines 166--166
-[]    \TU/lmtt/m/n/12 <p>&hellip;by using additional greater-than signs right ne
-xt to each other&hellip;</p>[] 
+ [73<./images///results/vagobuild.png>]
+Overfull \vbox (0.57599pt too high) detected at line 231
+ []
+
+[74]
+Underfull \vbox (badness 10000) detected at line 231
  []
 
 
-Overfull \hbox (227.99927pt too wide) in paragraph at lines 182--182
-[]    \TU/lmtt/m/n/12 <li>Create a list by starting a line with <code>+</code>, <code>-</code>, or <code>*</code></li>[] 
+Underfull \vbox (badness 10000) detected at line 231
  []
 
-
-Overfull \hbox (42.59949pt too wide) in paragraph at lines 206--206
-[]    \TU/lmtt/m/n/12 <li><p>&hellip;or keep all the numbers as <code>1.</code><
-/p></li>[] 
- []
-
-[70]
-Underfull \vbox (badness 10000) detected at line 227
- []
-
-
-Underfull \vbox (badness 10000) detected at line 227
- []
-
-[71]
-<images///results/vagoserve.png, id=293, 682.55pt x 122.4575pt>
+[75]
+<images///results/vagoserve.png, id=305, 682.55pt x 122.4575pt>
 File: images///results/vagoserve.png Graphic file (type png)
 <use images///results/vagoserve.png>
-Package luatex.def Info: images///results/vagoserve.png  used on input line 239
+Package luatex.def Info: images///results/vagoserve.png  used on input line 243
 .
 (luatex.def)             Requested size: 390.0pt x 69.97153pt.
-<images///results/browserfirsthtml.png, id=294, 692.5875pt x 983.675pt>
+<images///results/browserfirsthtml.png, id=306, 692.5875pt x 983.675pt>
 File: images///results/browserfirsthtml.png Graphic file (type png)
 <use images///results/browserfirsthtml.png>
 Package luatex.def Info: images///results/browserfirsthtml.png  used on input l
-ine 249.
+ine 253.
 (luatex.def)             Requested size: 312.00119pt x 443.14499pt.
- [72<./images///results/vagoserve.png>] [73<./images///results/browserfirsthtml.
-png>] [74] [75]
-<images///results/vagobuild2.png, id=309, 830.10126pt x 341.275pt>
+ [76<./images///results/vagoserve.png>] [77<./images///results/browserfirsthtml.
+png>] [78] [79]
+<images///results/vagobuild2.png, id=321, 830.10126pt x 341.275pt>
 File: images///results/vagobuild2.png Graphic file (type png)
 <use images///results/vagobuild2.png>
 Package luatex.def Info: images///results/vagobuild2.png  used on input line 37
-5.
+9.
 (luatex.def)             Requested size: 390.0pt x 160.33678pt.
- [76]
-<images///results/vagoserve2.png, id=313, 1394.20876pt x 812.03375pt>
+ [80]
+<images///results/vagoserve2.png, id=326, 1394.20876pt x 812.03375pt>
 File: images///results/vagoserve2.png Graphic file (type png)
 <use images///results/vagoserve2.png>
-Package luatex.def Info: images///results/vagoserve2.png  used on input line 38
-8.
+Package luatex.def Info: images///results/vagoserve2.png  used on input line 39
+2.
 (luatex.def)             Requested size: 390.0pt x 227.14487pt.
- [77<./images///results/vagobuild2.png>]
-<images///results/vagoserve3.png, id=318, 1254.6875pt x 982.67125pt>
+ [81<./images///results/vagobuild2.png>]
+<images///results/vagoserve3.png, id=331, 1254.6875pt x 982.67125pt>
 File: images///results/vagoserve3.png Graphic file (type png)
 <use images///results/vagoserve3.png>
-Package luatex.def Info: images///results/vagoserve3.png  used on input line 40
-8.
+Package luatex.def Info: images///results/vagoserve3.png  used on input line 41
+2.
 (luatex.def)             Requested size: 390.0pt x 305.44963pt.
-) [78<./images///results/vagoserve2.png>] (./chapters/conclusion/conclusion.tex
- [79<./images///results/vagoserve3.png>]
+) [82<./images///results/vagoserve2.png>] (./chapters/conclusion/conclusion.tex
+ [83<./images///results/vagoserve3.png>]
 Chapter 7.
-[80
+[84
 
-]) [81] (C:/Users/javif/GolandProjects/awesomeProject/thesis/out/main.aux)
+]) (./chapters/future/futurelines.tex [85]
+Chapter 8.
+) [86
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+]
+Package markdown Info: Including markdown document "chapters/bibliography.md" o
+n input line 150.
+ (./_markdown_main/a871563c597915262c509930f3a78374.md.tex [87]
+Chapter 9.
 
-)
+Overfull \hbox (7.44543pt too wide) in paragraph at lines 4--5
+[]\TU/lmr/m/it/12 What is a static site gen-er-a-tor?\TU/lmr/m/n/12 . Cloud-flar
+e. (n.d.) . https://www.cloud-
+ []
+
+
+Overfull \hbox (2.47704pt too wide) in paragraph at lines 7--8
+[]\TU/lmr/m/n/12 Wiki-me-dia Foun-da-tion. (2023a, April 11). \TU/lmr/m/it/12 Hu
+go (soft-ware)\TU/lmr/m/n/12 . Wikipedia.
+ []
+
+
+Overfull \hbox (104.27217pt too wide) in paragraph at lines 11--12
+[]\TU/lmr/m/it/12 Ac-ces-si-bil-ity prin-ci-ples\TU/lmr/m/n/12 . Web Ac-ces-si-b
+il-ity Ini-tia-tive (WAI) . https://www.w3.org/WAI/fun-
+ []
+
+
+Overfull \hbox (98.64427pt too wide) in paragraph at lines 12--13
+\TU/lmr/m/n/12 MDN. https://de-vel-oper.mozilla.org/en-US/docs/Learn/Ac-ces-si-b
+il-ity/What\TU/lmr/m/it/12 is\TU/lmr/m/n/12 accessibility 
+ []
+
+
+Overfull \hbox (21.13219pt too wide) in paragraph at lines 13--14
+\TU/lmr/m/n/12 de-vel-op-ment | MDN. https://de-vel-oper.mozilla.org/en-US/docs/
+Learn/Ac-
+ []
+
+
+Overfull \hbox (29.05913pt too wide) in paragraph at lines 14--15
+\TU/lmr/m/it/12 vel-op-ment with Ap-pRun\TU/lmr/m/n/12 . Apress, Berke-ley, CA. https://doi.org/10.1007/978-
+ []
+
+[88
+
+]) [89] (C:/Users/javif/GolandProjects/awesomeProject/thesis/out/main.aux))
 
 Here is how much of LuaTeX's memory you used:
- 8394 strings out of 477352
+ 8432 strings out of 477352
  100000,953878 words of node,token memory allocated
  541 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 9 attribute, 59 glue_spec,
  9 attribute_list, 2 write nodes
-   avail lists: 2:561,3:743,4:76,5:424,6:115,7:5894,8:38,9:546,10:15,11:535
- 28772 multiletter control sequences out of 65536+600000
+   avail lists: 2:561,3:743,4:82,5:425,6:118,7:5896,8:38,9:546,10:15,11:535
+ 28780 multiletter control sequences out of 65536+600000
  71 fonts using 5161087 bytes
  82i,9n,76p,1120b,357s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <//?/d:/program files/miktex/fonts/opentype/public/lm/lmmono10-regular.otf><//?/
@@ -894,9 +925,9 @@ s/miktex/fonts/opentype/public/lm/lmmono12-regular.otf><//?/d:/program files/mik
 tex/fonts/opentype/public/lm/lmroman12-bold.otf><//?/d:/program files/miktex/fon
 ts/opentype/public/lm/lmroman12-regular.otf><//?/d:/program files/miktex/fonts/o
 pentype/public/lm/lmroman17-regular.otf>
-Output written on main.pdf (82 pages, 1146156 bytes).
+Output written on main.pdf (90 pages, 1156847 bytes).
 
-PDF statistics: 384 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 408 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

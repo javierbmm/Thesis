@@ -16,6 +16,12 @@
 % Graphics
 \graphicspath{ {images/} }
 \floatplacement{figure}{H}
+% Verbatim
+\usepackage{framed,color,verbatim}
+\definecolor{shadecolor}{rgb}{.9, .9, .9}
+\newenvironment{code}%
+{\snugshade\verbatim}%
+{\endverbatim\endsnugshade}
 % title
 \title{
         {Static Site Generator}\\
@@ -106,6 +112,8 @@
     which can be (sometimes) a painful issue to solve.
 
     % SRS
+
+
     \chapter{Software requirements specifications}\label{ch:software-requirements-specifications}
 
     % SRS Introduction.
@@ -127,5 +135,11 @@
     \setkeys{Gin}{width=0.7\linewidth}
     % Implementation
     \markdownInput{chapters/implementation/implementation.md}
+
+    % Results
+    \input{chapters/results/results.tex}
+
+    % Conclusions
+    \input{chapters/conclusion/conclusion.tex}
 
 \end{document}

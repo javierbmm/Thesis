@@ -187,9 +187,9 @@ Then, the implementation of each logger is dedicated to its requirements and fun
 
 ### Generator Logger
 
-Instantiated by a Init function, where the developer can specify in advance the pagename to log as a prefix, and whether
-it should include timestamps or no logs at all. These last two parameters are taken by the prefixer, which will take
-care of the prefixing log information.
+Instantiated by an Init function, where the developer can specify in advance the pagename to log as a prefix, and
+whether it should include timestamps or no logs at all. These last two parameters are taken by the prefixer, which will
+take care of the prefixing log information.
 
 Moreover, the logging functions, Info, Warning and Error will simply take the prefixer and use the Prefix function to
 add the logging level, followed by the logging text, which may or not have arguments to add to the text, similar to what
@@ -200,9 +200,58 @@ is done in fmt.Print, adding extra formatting options for flexibility.
 ### Generator Prefixer
 
 Here the prefixer will take care of the timestamp in RFC822 format, whether the logs should be printed or not and the
-prefixed log level, and the file/page name to be logged. Doing so allow the prefix to be flexible according to the established
-configuration.
+prefixed log level, and the file/page name to be logged. Doing so allow the prefix to be flexible according to the
+established configuration.
 
 ![Generator prefixer implementation](../../images/implementation/generatorprefixer.png "Generator prefixer implementation.")
 
 ![Generator logger and prefixer result](../../images/implementation/GeneratorLoggerShape.png "Generator logger and prefixer result.")
+
+## CLI
+
+As mentioned in previous chapters, the CLI is developed with urfave/cli package, which allow customization for commands
+using typical Linux CLI format, displaying the information required from the user to execute them successfully. This
+information includes the following:
+
+* Build
+    - Name: build.
+    - Flags: _config_ (--c), _no-log_ (--nl) and _no-time_ (--ct).
+    - Description: Build/Generate web content from markdown files on indicated folder (default: config.yaml).
+
+![VaGo CLI build definition.](../../images/implementation/clibuild.png "VaGo CLI build definition.")
+
+
+* Serve
+    - Name: serve.
+    - Flags: _port_ (--p) and _config_ (--c).
+    - Description: Start serving generated content via specific port (default: 8080).
+
+![VaGo CLI serve definition.](../../images/implementation/cliserve.png "VaGo CLI serve definition.")
+
+For both commands, the common flag, config, is meant to be used to indicate the entry configuration file, which contains
+information about input and output folders, templates, styles, theme and homepage. For Build, no-log and no-time are
+used to indicate the system to not print logs at all and to not display timestamps, accordingly. For Serve, the port
+flag is used to specify the port number to be used.
+
+Moreover, the package provides the utility to display help usage for both commands, including the main VaGo application.
+This documentation provides information about the command's description, usage of every flag, input type, default values,
+short command, and how to correctly structure the operation. 
+
+![VaGo CLI help.](../../images/implementation/clihelp.png "VaGo CLI help.")
+
+![VaGo CLI build help.](../../images/implementation/clibuildhelp.png "VaGo CLI build help.")
+
+![VaGo CLI serve help.](../../images/implementation/cliservehelp.png "VaGo CLI serve help.")
+
+Finally, when a Build command is called, it will execute the Build function from the generator package, sending the 
+configuration file (reading it through a helper function to get YAML files), no-log and no-time as parameters.
+
+On the other side, the Serve command will execute the Serve function from the server package, sending the port number 
+and configuration file as parameters.
+
+Both commands are specified in the Action field for urfave/cli package command type. 
+
+
+![VaGo CLI build action definition.](../../images/implementation/clibuildaction.png "VaGo CLI build action definition.")
+
+![VaGo CLI serve action definition.](../../images/implementation/cliserveaction.png "VaGo CLI serve action definition.")

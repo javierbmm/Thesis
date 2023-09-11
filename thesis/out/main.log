@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.1 (MiKTeX 22.10) (format=lualatex 2023.3.2)  11 SEP 2023 08:45
+This is LuaHBTeX, Version 1.15.1 (MiKTeX 22.10) (format=lualatex 2023.3.2)  11 SEP 2023 17:49
  restricted system commands enabled.
  file:line:error style messages enabled.
 **main.tex
@@ -525,7 +525,7 @@ Chapter 4.
 ] [40] [41])
 Package markdown Info: Including markdown document "chapters/implementation/imp
 lementation.md" on input line 129.
- (./_markdown_main/a2ecf136d60a3b7609eb23c056747e2f.md.tex
+ (./_markdown_main/a2f8b1dab21154aa8a2703543b2fa3b6.md.tex
 [42]
 Chapter 5.
 [43
@@ -660,28 +660,17 @@ File: images//../../images/implementation/loggeri.png Graphic file (type png)
 Package luatex.def Info: images//../../images/implementation/loggeri.png  used 
 on input line 73.
 (luatex.def)             Requested size: 272.99881pt x 288.55077pt.
+<images//../../images/implementation/prefixeri.png, id=224, 347.2975pt x 112.42
+pt>
+File: images//../../images/implementation/prefixeri.png Graphic file (type png)
 
-
-LaTeX Warning: File `../../images/implementation/prefixi.png' not found on inpu
-t line 77.
-
-
-./_markdown_main/a2ecf136d60a3b7609eb23c056747e2f.md.tex:77: Package luatex.def
- Error: File `../../images/implementation/prefixi.png' not found: using draft s
-etting.
-
-See the luatex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 ...ementation/prefixi.png}{Prefixer interface.}
-                                                  \markdownRendererInterbloc...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[58<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../images
-/implementation/loggeri.png>] [59]
-<images//../../images/implementation/generatorlogger.png, id=231, 757.83125pt x
+<use images//../../images/implementation/prefixeri.png>
+Package luatex.def Info: images//../../images/implementation/prefixeri.png  use
+d on input line 77.
+(luatex.def)             Requested size: 272.99881pt x 88.3734pt.
+ [58<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
+s/implementation/loggeri.png>]
+<images//../../images/implementation/generatorlogger.png, id=229, 757.83125pt x
  388.45125pt>
 File: images//../../images/implementation/generatorlogger.png Graphic file (typ
 e png)
@@ -689,7 +678,10 @@ e png)
 Package luatex.def Info: images//../../images/implementation/generatorlogger.pn
 g  used on input line 82.
 (luatex.def)             Requested size: 272.99881pt x 139.93716pt.
-<images//../../images/implementation/generatorprefixer.png, id=232, 642.4pt x 4
+
+[59<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../images
+/implementation/prefixeri.png>]
+<images//../../images/implementation/generatorprefixer.png, id=234, 642.4pt x 4
 11.5375pt>
 File: images//../../images/implementation/generatorprefixer.png Graphic file (t
 ype png)
@@ -697,9 +689,7 @@ ype png)
 Package luatex.def Info: images//../../images/implementation/generatorprefixer.
 png  used on input line 85.
 (luatex.def)             Requested size: 272.99881pt x 174.89171pt.
- [60<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
-s/implementation/generatorlogger.png>]
-<images//../../images/implementation/GeneratorLoggerShape.png, id=238, 461.725p
+<images//../../images/implementation/GeneratorLoggerShape.png, id=235, 461.725p
 t x 284.06125pt>
 File: images//../../images/implementation/GeneratorLoggerShape.png Graphic file
  (type png)
@@ -707,21 +697,88 @@ File: images//../../images/implementation/GeneratorLoggerShape.png Graphic file
 Package luatex.def Info: images//../../images/implementation/GeneratorLoggerSha
 pe.png  used on input line 86.
 (luatex.def)             Requested size: 272.99881pt x 167.95442pt.
-)
-[61<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../images
-/implementation/generatorprefixer.png><C:/Users/javif/GolandProjects/awesomeProj
-ect/thesis/out/images//../../images/implementation/GeneratorLoggerShape.png>] (C:/Users/javif/GolandProjects/awesomeProject/thesis/out/main.aux))
+ [60<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
+s/implementation/generatorlogger.png><C:/Users/javif/GolandProjects/awesomeProje
+ct/thesis/out/images//../../images/implementation/generatorprefixer.png>]
+<images//../../images/implementation/clibuild.png, id=242, 1014.79124pt x 696.6
+025pt>
+File: images//../../images/implementation/clibuild.png Graphic file (type png)
+<use images//../../images/implementation/clibuild.png>
+Package luatex.def Info: images//../../images/implementation/clibuild.png  used
+ on input line 97.
+(luatex.def)             Requested size: 272.99881pt x 187.39429pt.
+ [61<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
+s/implementation/GeneratorLoggerShape.png>]
+<images//../../images/implementation/cliserve.png, id=247, 770.88pt x 497.86pt>
+
+File: images//../../images/implementation/cliserve.png Graphic file (type png)
+<use images//../../images/implementation/cliserve.png>
+Package luatex.def Info: images//../../images/implementation/cliserve.png  used
+ on input line 98.
+(luatex.def)             Requested size: 272.99881pt x 176.31232pt.
+
+[62<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../images
+/implementation/clibuild.png><C:/Users/javif/GolandProjects/awesomeProject/thesi
+s/out/images//../../images/implementation/cliserve.png>]
+<images//../../images/implementation/clihelp.png, id=253, 1051.93pt x 443.6575p
+t>
+File: images//../../images/implementation/clihelp.png Graphic file (type png)
+<use images//../../images/implementation/clihelp.png>
+Package luatex.def Info: images//../../images/implementation/clihelp.png  used 
+on input line 109.
+(luatex.def)             Requested size: 272.99881pt x 115.13837pt.
+<images//../../images/implementation/clibuildhelp.png, id=254, 1102.1175pt x 36
+3.3575pt>
+File: images//../../images/implementation/clibuildhelp.png Graphic file (type p
+ng)
+<use images//../../images/implementation/clibuildhelp.png>
+Package luatex.def Info: images//../../images/implementation/clibuildhelp.png  
+used on input line 110.
+(luatex.def)             Requested size: 272.99881pt x 90.00194pt.
+<images//../../images/implementation/cliservehelp.png, id=255, 843.15pt x 333.2
+45pt>
+File: images//../../images/implementation/cliservehelp.png Graphic file (type p
+ng)
+<use images//../../images/implementation/cliservehelp.png>
+Package luatex.def Info: images//../../images/implementation/cliservehelp.png  
+used on input line 111.
+(luatex.def)             Requested size: 272.99881pt x 107.90163pt.
+ [63<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../image
+s/implementation/clihelp.png><C:/Users/javif/GolandProjects/awesomeProject/thesi
+s/out/images//../../images/implementation/clibuildhelp.png>]
+<images//../../images/implementation/clibuildaction.png, id=261, 533.995pt x 14
+7.55125pt>
+File: images//../../images/implementation/clibuildaction.png Graphic file (type
+ png)
+<use images//../../images/implementation/clibuildaction.png>
+Package luatex.def Info: images//../../images/implementation/clibuildaction.png
+  used on input line 115.
+(luatex.def)             Requested size: 272.99881pt x 75.437pt.
+<images//../../images/implementation/cliserveaction.png, id=262, 533.995pt x 14
+1.52875pt>
+File: images//../../images/implementation/cliserveaction.png Graphic file (type
+ png)
+<use images//../../images/implementation/cliserveaction.png>
+Package luatex.def Info: images//../../images/implementation/cliserveaction.png
+  used on input line 116.
+(luatex.def)             Requested size: 272.99881pt x 72.35794pt.
+) [64<C:/Users/javif/GolandProjects/awesomeProject/thesis/out/images//../../imag
+es/implementation/cliservehelp.png><C:/Users/javif/GolandProjects/awesomeProject
+/thesis/out/images//../../images/implementation/clibuildaction.png>] [65<C:/User
+s/javif/GolandProjects/awesomeProject/thesis/out/images//../../images/implementa
+tion/cliserveaction.png>]
+(C:/Users/javif/GolandProjects/awesomeProject/thesis/out/main.aux))
 
 Here is how much of LuaTeX's memory you used:
- 8113 strings out of 477352
- 100000,794899 words of node,token memory allocated
+ 8102 strings out of 477352
+ 100000,953878 words of node,token memory allocated
  536 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 9 attribute, 58 glue_spec,
  9 attribute_list, 2 write nodes
-   avail lists: 2:561,3:131,4:76,5:420,6:45,7:5894,8:38,9:546,10:15,11:535
- 28554 multiletter control sequences out of 65536+600000
+   avail lists: 2:561,3:131,4:76,5:424,6:45,7:5894,8:38,9:546,10:15,11:535
+ 28588 multiletter control sequences out of 65536+600000
  71 fonts using 5161087 bytes
- 82i,9n,76p,1120b,361s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 82i,9n,76p,1120b,357s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <//?/d:/program files/miktex/fonts/opentype/public/lm/lmmono10-regular.otf><//?/
 d:/program files/miktex/fonts/opentype/public/lm/lmroman7-regular.otf><//?/d:/pr
 ogram files/miktex/fonts/opentype/public/lm/lmroman8-regular.otf><//?/d:/program
@@ -730,9 +787,9 @@ s/miktex/fonts/opentype/public/lm/lmmono12-regular.otf><//?/d:/program files/mik
 tex/fonts/opentype/public/lm/lmroman12-bold.otf><//?/d:/program files/miktex/fon
 ts/opentype/public/lm/lmroman12-regular.otf><//?/d:/program files/miktex/fonts/o
 pentype/public/lm/lmroman17-regular.otf>
-Output written on main.pdf (62 pages, 633304 bytes).
+Output written on main.pdf (66 pages, 856439 bytes).
 
-PDF statistics: 294 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 322 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

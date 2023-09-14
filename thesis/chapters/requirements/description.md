@@ -6,7 +6,8 @@
 providing a simple interface for both the content creator (intended to work primarily in markdown files) and the theme
 author to create and style websites (meant to provide default styles while deciding editable parameters).
 
-In this regard, it is very similar to, and in fact inspired by, HuGo, another SSG written in the Go programming
+In this regard, it is very similar to, and in fact inspired by, HuGo\cite{hugo}, another SSG written in the Go 
+programming
 language. Despite this, `VaGo` attempts to adopt a comparable theming methodology while incorporating simplified
 modification capabilities. This would enable prospective users to reuse and personalize pre-existing themes without the
 need to delve into CSS files. Furthermore, the system in question lacks a focus on performance and does not aim to rival

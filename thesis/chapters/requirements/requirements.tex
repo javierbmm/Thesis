@@ -1,0 +1,445 @@
+%! Author = javif
+%! Date = 9/14/2023
+
+\subsection{Specific requirements}\label{subsec:specific-requirements}
+
+\subsubsection{External interfaces}\label{subsubsec:external-interfaces}
+
+Users will be able to interact with the system using CLI commands to
+carry out simple operations that are built into the system. Here, two
+fundamental commands should be noted:
+
+\begin{itemize}
+    \item
+    \texttt{Build}.
+    \item
+    \texttt{Serve}: To serve and share content via a specific port.
+\end{itemize}
+
+Additionally, the system ought to alert the user any time a command it
+has issued contains an error because it is possible for them to
+accidentally type the wrong command or misspell any of these. (using
+buidl instead of build). Notably, unlike other systems, it will lack a
+recommendation system to offer hints of similar words that are actually
+interpreted as to assist the user in finding alternative commands, even
+though it will inform the user about the existence of an error that
+prevented the system from performing the required task.
+
+\paragraph{Build}\label{par:build}
+
+The task at hand involves the conversion of Markdown files into
+web-based content, specifically in the form of HTML, JS, and CSS.
+
+The program is designed to utilize the Command Line Interface (CLI) as
+an input mechanism, whereby it recognizes the command name to execute
+its designated task. Its output function involves generating the HTML
+and CSS content into an \texttt{out} folder, in accordance with the
+pre-existing Markdown files. It is noteworthy that each MD file ought to
+generate an individual page to allow for the adaptability of
+transforming every file into a distinct output for the website.
+
+Throughout the translation process, it is imperative that the user is
+kept informed of its progress. In the event of any errors, the system
+should prompt error messages to ensure the accuracy of the MD files,
+while simultaneously verifying that all necessary parameters for content
+and styling have been provided. Upon completion, the system should
+explicitly indicate the out folder path to the user.
+
+Therefore, it should use the following format for each of the steps
+considered for the translation and building process: {[}Date{]}{[}Page
+Name{]}: Step, where each one of these detail token corresponds to:
+
+\begin{itemize}
+    \item
+    Date: Specific date and time using the ISO 8601 format
+    \href{https://en.wikipedia.org/wiki/ISO_8601}{1} without specifying
+    the timezone as \texttt{VaGo} will limit itself to use the same
+    timezone from the host machine. For instance: \emph{2023-04-09T14:
+    22:05} should be used to represent the year 2023, month April (04),
+    day 09 at 14 hours, 22 minutes and 05 seconds.
+    \item
+    Page Name: To specify the exact page name for the URL that takes to
+    that specific page, which is the same as the MD file name.
+    \item
+    Step: To specify the building step it's currently on, whether it is
+    identifying the MD tokens, performing translation to HTML and/or
+    obtaining the parameters set for the theming and styling of the given
+    page.
+\end{itemize}
+
+On the other hand, additional parameters can be added to the command for
+specific output capabilities. For instance, \texttt{no-log} should be
+using to omitting logging (no prompt message for every building process
+step) except for error and finalization message. Also, \texttt{no-time}
+should be used to omit the timestamp from the steps, prompting a message
+with the following structure: \emph{{[}Page name{]}:Step}, with the
+purpose of avoiding overloading logs and make them easier to read.
+
+\paragraph{Serve}\label{par:serve}
+
+The second command serves the purpose of keep the system continuously
+executing, hence no accepting other commands in the meantime, in order
+to open a port and send the already built files (by means of the
+previous command, \texttt{build}) via HTTP.
+
+It is important to note that this command will exclusively serve content
+available in the \texttt{out} folder, therefore if the previous command
+hasn't been run, or if there are no files in this folder, then it won't
+be able to serve any content at all. Because of it, it is required that
+the user must first build content in order to then serve it.
+
+Moreover, in addition to the behavior noted above, it must output logs
+to inform the user of the current status of the serving process,
+starting by indicating as soon as it starts reading content and
+initiating listening for requests, while also informing of any issue
+that may occur by prompting error messages.
+
+Once it starts listening for requests, it should inform of any incoming
+request/response using the following format: {[}Date{]}: Sending
+        {[}Page{]} to {[}requester IP{]}, where each one of these token
+corresponds to:
+
+\begin{itemize}
+    \item
+    Date: Same as the one outlined for \texttt{build} command, using the
+    ISO 8601 format without timezone.
+    \item
+    Page: Page name as stated in the MD filename.
+    \item
+    Requester IP: Specific IP address of the incoming IP.
+\end{itemize}
+
+Additionally, an extra (optional) parameter can be provided to outline
+the specific port the system should open to listen for requests, instead
+of the default one.
+
+\subsubsection{Functions}\label{subsubsec:functions}
+
+The following provides a more in-depth explanation of the functional
+areas, including full requirements.
+
+\paragraph{Generate page}\label{par:generate-page}
+
+\subparagraph{Description and priority}\label{subpar:description-and-priority}
+
+The task at hand involves generating a page document through the process
+of translating the contents of a Markdown file into HTML. This requires
+the utilization of appropriate tags to accurately map the entities
+present within each Markdown block. Priority: HIGH.
+
+\subparagraph{Stimulus/Response
+sequences}\label{subpar:stimulusresponse-sequences}
+
+Stimulus: This feature must obtain the markdown files from a
+\texttt{source} folder.
+
+Response: Translate or generate a corresponding HTML file for each one
+of these MD files, outputting the result pages into an \texttt{out}
+folder.
+
+\subparagraph{Functional requirements}\label{subpar:functional-requirements}
+
+\textbf{REQ-1}: The MD blocks must be interpreted and translated to HTML
+tags to generate a page accordingly to what the user has described
+initially. It should, at least, implement the following elements to
+ensure a fully accessible page as per best practices for web standards:
+
+\begin{itemize}
+    \item
+    Heading level 1 (\texttt{\#}): Heading 1
+    (\texttt{\textless{}h1\textgreater{}\textless{}/h1\textgreater{}}).
+    \item
+    Heading level 2 (\texttt{\#\#}): Heading 2
+    (\texttt{\textless{}h2\textgreater{}\textless{}/h2\textgreater{}}).
+    \item
+    Heading level 3 (\texttt{\#\#\#}): Heading 3
+    (\texttt{\textless{}h3\textgreater{}\textless{}/h3\textgreater{}}).
+    \item
+    Heading level 4 (\texttt{\#\#\#\#}): Heading 4
+    (\texttt{\textless{}h4\textgreater{}\textless{}/h4\textgreater{}}).
+    \item
+    Heading level 5 (\texttt{\#\#\#\#\#}): Heading 5
+    (\texttt{\textless{}h5\textgreater{}\textless{}/h5\textgreater{}}).
+    \item
+    Heading level 6 (\texttt{\#\#\#\#\#\#}): Heading 6
+    (\texttt{\textless{}h6\textgreater{}\textless{}/h6\textgreater{}}).
+    \item
+    Text: Paragraph
+    (\texttt{\textless{}p\textgreater{}\textless{}/p\textgreater{}}).
+    \item
+    Bold text (\texttt{**text**}): Strong
+    (\texttt{\textless{}strong\textgreater{}\textless{}/strong\textgreater{}}).
+    \item
+    Italic text (\texttt{\_text\_}): Emphasis
+    (\texttt{\textless{}em\textgreater{}\textless{}/em\textgreater{}}).
+    \item
+    Blockquote (\texttt{\textgreater{}}): Blockquote
+    (\texttt{\textless{}blockquote\textgreater{}\textless{}/blockquote\textgreater{}}).
+    \item
+    Unordered list (\texttt{-}): Unordered list
+    (\texttt{\textless{}ul\textgreater{}\textless{}/ul\textgreater{}})
+    surrounding list items
+    (\texttt{\textless{}li\textgreater{}\textless{}/li\textgreater{}}).
+    \item
+    Ordered list (\texttt{1.}, \texttt{2.}, \texttt{3.}, and so): Ordered
+    list
+    (\texttt{\textless{}ol\textgreater{}\textless{}/ol\textgreater{}})
+    surrounding list items
+    (\texttt{\textless{}li\textgreater{}\textless{}/li\textgreater{}}).
+    \item
+    Code (\texttt{\textasciigrave{}\textasciigrave{}}): Code
+    (\texttt{\textless{}code\textgreater{}\textless{}/code\textgreater{}}).
+    \item
+    Fenced code block
+    (\texttt{\textasciigrave{}\textasciigrave{}\textasciigrave{}\ \textasciigrave{}\textasciigrave{}\textasciigrave{}}):
+    Preformatted text
+    (\texttt{\textless{}pre\textgreater{}\textless{}/pre\textgreater{}})
+    surrounding a code block
+    (\texttt{\textless{}code\textgreater{}\textless{}/code\textgreater{}}).
+    \item
+    Link (\texttt{{[}text{]}(URL)}): Anchor tag along with the hyperlink
+    attribute
+    (\texttt{\textless{}a\ href="URL"\textgreater{}text\textless{}/a\textgreater{}}).
+    \item
+    Image (\texttt{!{[}Alt\ text{]}(URL)}): Image tag along with alt text
+    and source attributes
+    (\texttt{\textless{}img\ alt="Alt\ text"\ src="URL"\textgreater{}\textless{}/img\textgreater{}}).
+\end{itemize}
+
+\textbf{REQ-2}: It must verify whenever there is an input error or
+incorrect usage of the MD blocks, and thereby let the user know about
+these via error messages and halt the translation process immediately.
+
+\textbf{REQ-3}: Each generated page will have the same file name as the
+input MD file.
+
+\paragraph{Theme styling creation and
+customization}\label{par:theme-styling-creation-and-customization}
+
+\subparagraph{Description and
+priority}\label{subpar:description-and-priority-1}
+
+This feature is responsible for enabling the construction of a
+customizable theme for styling purposes. As long as the author (the
+theme creator) enhances these capabilities via exposed variables, it
+will manage CSS files that will provide styles to the pages and provide
+functionalities to perform tweaks and changes to the theme. Therefore,
+subsequent users of the same theme would be able to make certain
+modifications to suit their needs, while retaining the already provided
+set of opinionated styles. Priority: MEDIUM.
+
+\subparagraph{Stimulus/Response
+sequences}\label{subpar:stimulusresponse-sequences-1}
+
+Stimulus: Single or multiple files with preprocessed CSS attributes that
+will receive the values of the exposed variables to be processed into a
+final CSS file. Notice that the format of this file is not strictly CSS
+as it should be noted that it is waiting for the building stage to add
+the variables, therefore it's suggested to use a temporal file name
+adding \texttt{.go.css} to differentiate it from its final version.
+
+Response: Once processed, the file or set of files will be merged into a
+single one, following an established structure and adding the exposed
+variables via Go.
+
+Stimulus: Authored parameters in the form of Go variables. There is also
+the possibility of exposing such variables via YAML or JSON format, to
+avoid overwriting Go code.
+
+Response: The parameters are added to the final CSS file.
+
+\textbf{REQ-1}: The exposed parameters should be added within the
+preprocessed style file using the pattern
+\texttt{\$\{{[}variable\ name{]}\}} in the same place where it will be
+replaced.
+
+\textbf{REQ-2}: These variables are then added or modified within a
+specific Go module specifically designed for this purpose. Thereby, the
+author will be able to expose these in this file, and add a default
+value in case the user decides to not change anything. It should be
+noted that the system won't take care of the compilation or verification
+of the CSS file, hence it is completely up to the author to verify
+whether it is correctly built.
+
+\textbf{REQ-3}: Multiple style files could be added together in a single
+final one, providing the author the flexibility to split them into
+different modules for readability and maintainability purposes, thus
+these must be specified in a Go module specifically designed for this
+purpose, or within a main preprocessed style file using the nomenclature
+\texttt{\$\{\#module:\ {[}file\ name{]}\}}.
+
+\textbf{REQ-4}: The system must verify and prompt a clear error message
+when there is a theme variable that has not been set. More specifically,
+it should display a message using the following structure:
+``\emph{Error: {[}variable name{]} has not been initialized.}'', where
+the variable name will be replaced with the specific variable missing
+its initialization.
+
+\paragraph{Templating}\label{par:templating}
+
+\subparagraph{Description and
+priority}\label{subpar:description-and-priority-2}
+
+The proposed system will incorporate a functionality that enables the
+establishment of a predetermined framework or outline, in addition to
+the primary template, for organizing the content into web pages. It is
+noteworthy that the utilization of Go language's templating capabilities
+is integral to the handling of this task. However, the system must
+furnish a mechanism for retrieving the primary information components
+from the markdown files. This will enable easy recognition and
+referencing of said components in the template, thereby facilitating
+customization. Priority: MEDIUM.
+
+\subparagraph{Stimulus/Response
+sequences}\label{subpar:stimulusresponse-sequences-2}
+
+Stimulus: Single or multiple HTML files with Go templating variables to
+be filled with, from which the user can decide to use custom variables
+(from custom Go code) or the main, already provided variables from the
+markdown file components (headings, text, bold, italic, lists, etc).
+
+Response: When built, a final HTML file should be prompted with the
+provided content via markdown files and following the provided structure
+or skeleton as in the template.
+
+\subparagraph{Functional requirements}\label{subpar:functional-requirements-1}
+
+\textbf{REQ-1}: The processed format must follow the established
+skeleton from the template. If there is no provided template, the system
+must use a base one already provided with the generator.
+
+\textbf{REQ-2}: Each markdown component should be accessible via Go
+variables following this naming convention:
+
+\begin{itemize}
+    \item
+    Heading level 1 (\texttt{\#}): \texttt{H1}
+    \item
+    Heading level 2 (\texttt{\#\#}): \texttt{H2}.
+    \item
+    Heading level 3 (\texttt{\#\#\#}): \texttt{H3}.
+    \item
+    Heading level 4 (\texttt{\#\#\#\#}): \texttt{H4}.
+    \item
+    Heading level 5 (\texttt{\#\#\#\#\#}): \texttt{H5}.
+    \item
+    Heading level 6 (\texttt{\#\#\#\#\#\#}): \texttt{H6}.
+    \item
+    Text: \texttt{B}.
+    \item
+    Bold text (\texttt{**text**}): \texttt{Strong}.
+    \item
+    Italic text (\texttt{\_text\_}): \texttt{Em}.
+    \item
+    Blockquote (\texttt{\textgreater{}}): \texttt{Blockquote}.
+    \item
+    Unordered list (\texttt{-}): \texttt{Ul}.
+    \item
+    Ordered list (\texttt{1.}, \texttt{2.}, \texttt{3.}, and so):
+    \texttt{Ol}.
+    \item
+    Code (\texttt{\textasciigrave{}\textasciigrave{}}): \texttt{Code}.
+    \item
+    Fenced code block
+    (\texttt{\textasciigrave{}\textasciigrave{}\textasciigrave{}\ \textasciigrave{}\textasciigrave{}\textasciigrave{}}):
+    \texttt{Pre}.
+    \item
+    Link (\texttt{{[}text{]}(URL)}): \texttt{A}, \texttt{A.URL}.
+    \item
+    Image (\texttt{!{[}Alt\ text{]}(URL)}): \texttt{Img},
+    \texttt{Img.Alt}, \texttt{Img.Src}.
+\end{itemize}
+
+It is important to note that the naming convention and HTML elements are
+identical. This is intentional, as it should direct the user to the
+correct element the component should be used in, so as to maintain best
+practices for web accessibility and search engine optimization, avoiding
+the use of meaningless \texttt{div} tags everywhere.
+
+\paragraph{Configuration files}\label{par:configuration-files}
+
+\subparagraph{Description and
+priority}\label{subpar:description-and-priority-3}
+
+Through the configuration files the user will be able to set up certain
+parameters that will change the way the system works to adapt it to
+given needs and setup, such as determine specific input and output
+folders, theme name, template file name, author information (name,
+website name, creation date), and others. It's worth noting that these
+configuration files are not strictly necessary as the system must
+initiate with a set of given default parameters, which can be
+overwritten for extended customization. Priority: LOW.
+
+\subparagraph{Stimulus/Response
+sequences}\label{subpar:stimulusresponse-sequences-3}
+
+Stimulus: A Go, JSON or YAML file with the set of parameters to be read
+from, so the system can use them as variables for its configuration. The
+type of file to be used will depend on the development time, as reading
+directly from a Go file or module it's easier and faster to implement
+than a JSON or YAML file, as it requires a parsing step first.
+
+Response: The system will produce and/or build the static content
+following these parameters accordingly.
+
+\subparagraph{Functional requirements}\label{subpar:functional-requirements-2}
+
+\emph{REQ-1}: The system will use a set of default values if the
+configuration files are not provided/changed, thus it is not strictly
+needed for the system to work properly.
+
+\emph{REQ-2}: The following configuration files must be scanned (found
+via specific filename) and used for its respective purpose: Theme config
+(\texttt{theme.*}, ) to specify styling parameters as well as the theme
+name, template config (` layout.\emph{) to specify the files entries for
+templating, main configuration (main.}) for the main parameters for
+VaGo. File extension to be decided depending on development time as
+noted on previous point.
+
+\emph{REQ-3}: For each configuration file, the system must be able to
+interpret and apply the following parameters:
+
+
+1. Theme config (\texttt{theme.*}):
+
+
+\begin{itemize}
+    \item
+    Theme name (\texttt{name}): The name of the given theme. This name
+    will be accessed for further setup steps.
+    \item
+    Parameters(\texttt{params}): An open field to add a list of the open
+    parameters for styling.
+\end{itemize}
+
+2. Template config (\texttt{layout.*}):
+
+\begin{itemize}
+    \item
+    Entries (\texttt{entries}): A list of template filenames to be
+    included in the templating system.
+    \item
+    Final layout (\texttt{final}): A nested ordered list of the templates
+    to be merged for the final composition layout.
+\end{itemize}
+
+3. Main config (\texttt{main.*}):
+
+\begin{itemize}
+    \item
+    Author name (\texttt{author}): The author name of the website to
+    generated content for.
+    \item
+    Input folder (\texttt{input}): Input folder to get the files to read
+    content from, prior to the website generation.
+    \item
+    Output folder (\texttt{output}): Output folder to write the static
+    generation results.
+    \item
+    Theme (\texttt{theme}): The name of the theme to be used for this
+    website.
+\end{itemize}
+
+It is worth noting that these configuration files and parameters are not
+final, and yet other may get included in the future depending on the
+needs that may arise.

@@ -12,12 +12,15 @@
 \usepackage{setspace}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{float}
+\usepackage{url}
 \singlespacing
 % Graphics
 \graphicspath{ {images/} }
 \floatplacement{figure}{H}
 % Verbatim
 \usepackage{framed,color,verbatim}
+\usepackage{textcomp}
+\usepackage{hyperref}
 \definecolor{shadecolor}{rgb}{.9, .9, .9}
 \newenvironment{code}%
 {\snugshade\verbatim}%
@@ -31,12 +34,15 @@
 \author{Javier Mérida}
 \date{12 02 2023}
 
+
 % Document
 \begin{document}
 
     \maketitle
 
     \tableofcontents
+
+    \input{chapters/introduction.tex}
 
     \chapter{Trying out popular SSGs}\label{ch:trying-out-popular-ssgs}
 
@@ -50,7 +56,7 @@
 
     \begin{itemize}
         \item NextJS (https://nextjs.org/)
-        \item Hugo
+        \item Hugo\cite{hugo}
         \item VuePress
         \item Eleventy
         \item Astro
@@ -84,7 +90,7 @@
 
     Also, it is important to note that the lack or the presence of any of these characteristic do not make any SSG better
     than others, as each one of them are made for a specific purpose and shine in terms of addressing the obstacle
-    they are meant to.
+    they are meant to\cite{khalid}.
     In fact, this section must be taken as an exploration of requisites to be taken into account.
 
 
@@ -118,13 +124,16 @@
     \chapter{Software requirements specifications}\label{ch:software-requirements-specifications}
 
     % SRS Introduction.
-    \markdownInput{chapters/requirements/introduction.md}
+    %\markdownInput{chapters/requirements/introduction.md}
+    \input{chapters/requirements/introduction.tex}
 
     % SRS Overall description
-    \markdownInput{chapters/requirements/description.md}
+    %\markdownInput{chapters/requirements/description.md}
+    \input{chapters/requirements/description.tex}
 
     % SRS Specific requirements.
-    \markdownInput{chapters/requirements/requirements.md}
+%    \markdownInput{chapters/requirements/requirements.md}
+    \input{chapters/requirements/requirements.tex}
 
     \setkeys{Gin}{width=1\linewidth}
     % Software design
@@ -148,5 +157,8 @@
 
     % Bibliography
     \markdownInput{chapters/bibliography.md}
+
+    \bibliography{chapters/citations}
+    \bibliographystyle{sapthesis}
 
 \end{document}

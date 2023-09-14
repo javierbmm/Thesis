@@ -1,17 +1,17 @@
 %! Author = javif
 %! Date = 9/14/2023
 
-\subsection{Specific requirements}\label{subsec:specific-requirements}
+\section{Specific requirements}\label{sec:specific-requirements}
 
-\subsubsection{External interfaces}\label{subsubsec:external-interfaces}
+\subsection{External interfaces}\label{subsec:external-interfaces}
 
-Users will be able to interact with the system using CLI commands to
+Users will be able to interact with the system using CLI commands\cite{wikicli} to
 carry out simple operations that are built into the system. Here, two
 fundamental commands should be noted:
 
 \begin{itemize}
     \item
-    \texttt{Build}.
+    \texttt{Build}: To parse and generate HTML content from markdown files.
     \item
     \texttt{Serve}: To serve and share content via a specific port.
 \end{itemize}
@@ -25,10 +25,10 @@ interpreted as to assist the user in finding alternative commands, even
 though it will inform the user about the existence of an error that
 prevented the system from performing the required task.
 
-\paragraph{Build}\label{par:build}
+\subsubsection{Build}\label{subsubsec:build}
 
-The task at hand involves the conversion of Markdown files into
-web-based content, specifically in the form of HTML, JS, and CSS.
+The task at hand involves the conversion of Markdown files\cite{wikimd} into
+web-based content, specifically in the form of HTML\cite{htmlmoz}, JS\cite{jsmoz}, and CSS\cite{cssmoz}.
 
 The program is designed to utilize the Command Line Interface (CLI) as
 an input mechanism, whereby it recognizes the command name to execute
@@ -51,8 +51,7 @@ Name{]}: Step, where each one of these detail token corresponds to:
 
 \begin{itemize}
     \item
-    Date: Specific date and time using the ISO 8601 format
-    \href{https://en.wikipedia.org/wiki/ISO_8601}{1} without specifying
+    Date: Specific date and time using the ISO 8601 format\cite{wikiiso} without specifying
     the timezone as \texttt{VaGo} will limit itself to use the same
     timezone from the host machine. For instance: \emph{2023-04-09T14:
     22:05} should be used to represent the year 2023, month April (04),
@@ -62,7 +61,7 @@ Name{]}: Step, where each one of these detail token corresponds to:
     that specific page, which is the same as the MD file name.
     \item
     Step: To specify the building step it's currently on, whether it is
-    identifying the MD tokens, performing translation to HTML and/or
+    identifying the MD tokens\cite{schutze2008introduction, wikilexical}, performing translation to HTML and/or
     obtaining the parameters set for the theming and styling of the given
     page.
 \end{itemize}
@@ -75,12 +74,12 @@ should be used to omit the timestamp from the steps, prompting a message
 with the following structure: \emph{{[}Page name{]}:Step}, with the
 purpose of avoiding overloading logs and make them easier to read.
 
-\paragraph{Serve}\label{par:serve}
+\subsubsection{Serve}\label{subsubsec:serve}
 
 The second command serves the purpose of keep the system continuously
 executing, hence no accepting other commands in the meantime, in order
 to open a port and send the already built files (by means of the
-previous command, \texttt{build}) via HTTP.
+previous command, \texttt{build}) via HTTP\cite{gourley2002http}.
 
 It is important to note that this command will exclusively serve content
 available in the \texttt{out} folder, therefore if the previous command
@@ -113,22 +112,22 @@ Additionally, an extra (optional) parameter can be provided to outline
 the specific port the system should open to listen for requests, instead
 of the default one.
 
-\subsubsection{Functions}\label{subsubsec:functions}
+\subsection{Functions}\label{subsec:functions}
 
 The following provides a more in-depth explanation of the functional
 areas, including full requirements.
 
-\paragraph{Generate page}\label{par:generate-page}
+\subsubsection{Generate page}\label{subsubsec:generate-page}
 
-\subparagraph{Description and priority}\label{subpar:description-and-priority}
+\paragraph{Description and priority}\label{par:description-and-priority}
 
 The task at hand involves generating a page document through the process
 of translating the contents of a Markdown file into HTML. This requires
 the utilization of appropriate tags to accurately map the entities
 present within each Markdown block. Priority: HIGH.
 
-\subparagraph{Stimulus/Response
-sequences}\label{subpar:stimulusresponse-sequences}
+\paragraph{Stimulus/Response
+sequences}\label{par:stimulusresponse-sequences}
 
 Stimulus: This feature must obtain the markdown files from a
 \texttt{source} folder.
@@ -137,12 +136,12 @@ Response: Translate or generate a corresponding HTML file for each one
 of these MD files, outputting the result pages into an \texttt{out}
 folder.
 
-\subparagraph{Functional requirements}\label{subpar:functional-requirements}
+\paragraph{Functional requirements}\label{par:functional-requirements}
 
 \textbf{REQ-1}: The MD blocks must be interpreted and translated to HTML
 tags to generate a page accordingly to what the user has described
 initially. It should, at least, implement the following elements to
-ensure a fully accessible page as per best practices for web standards:
+ensure a fully accessible page as per best practices for web standards\cite{accmoz}:
 
 \begin{itemize}
     \item
@@ -213,11 +212,11 @@ these via error messages and halt the translation process immediately.
 \textbf{REQ-3}: Each generated page will have the same file name as the
 input MD file.
 
-\paragraph{Theme styling creation and
-customization}\label{par:theme-styling-creation-and-customization}
+\subsubsection{Theme styling creation and
+customization}\label{subsubsec:theme-styling-creation-and-customization}
 
-\subparagraph{Description and
-priority}\label{subpar:description-and-priority-1}
+\paragraph{Description and
+priority}\label{par:description-and-priority-1}
 
 This feature is responsible for enabling the construction of a
 customizable theme for styling purposes. As long as the author (the
@@ -228,8 +227,8 @@ subsequent users of the same theme would be able to make certain
 modifications to suit their needs, while retaining the already provided
 set of opinionated styles. Priority: MEDIUM.
 
-\subparagraph{Stimulus/Response
-sequences}\label{subpar:stimulusresponse-sequences-1}
+\paragraph{Stimulus/Response
+sequences}\label{par:stimulusresponse-sequences-1}
 
 Stimulus: Single or multiple files with preprocessed CSS attributes that
 will receive the values of the exposed variables to be processed into a
@@ -243,7 +242,7 @@ single one, following an established structure and adding the exposed
 variables via Go.
 
 Stimulus: Authored parameters in the form of Go variables. There is also
-the possibility of exposing such variables via YAML or JSON format, to
+the possibility of exposing such variables via YAML\cite{wikiyaml} or JSON\cite{wikijson} format, to
 avoid overwriting Go code.
 
 Response: The parameters are added to the final CSS file.
@@ -275,10 +274,10 @@ it should display a message using the following structure:
 the variable name will be replaced with the specific variable missing
 its initialization.
 
-\paragraph{Templating}\label{par:templating}
+\subsubsection{Templating}\label{subsubsec:templating}
 
-\subparagraph{Description and
-priority}\label{subpar:description-and-priority-2}
+\paragraph{Description and
+priority}\label{par:description-and-priority-2}
 
 The proposed system will incorporate a functionality that enables the
 establishment of a predetermined framework or outline, in addition to
@@ -290,8 +289,8 @@ from the markdown files. This will enable easy recognition and
 referencing of said components in the template, thereby facilitating
 customization. Priority: MEDIUM.
 
-\subparagraph{Stimulus/Response
-sequences}\label{subpar:stimulusresponse-sequences-2}
+\paragraph{Stimulus/Response
+sequences}\label{par:stimulusresponse-sequences-2}
 
 Stimulus: Single or multiple HTML files with Go templating variables to
 be filled with, from which the user can decide to use custom variables
@@ -302,7 +301,7 @@ Response: When built, a final HTML file should be prompted with the
 provided content via markdown files and following the provided structure
 or skeleton as in the template.
 
-\subparagraph{Functional requirements}\label{subpar:functional-requirements-1}
+\paragraph{Functional requirements}\label{par:functional-requirements-1}
 
 \textbf{REQ-1}: The processed format must follow the established
 skeleton from the template. If there is no provided template, the system
@@ -356,10 +355,10 @@ correct element the component should be used in, so as to maintain best
 practices for web accessibility and search engine optimization, avoiding
 the use of meaningless \texttt{div} tags everywhere.
 
-\paragraph{Configuration files}\label{par:configuration-files}
+\subsubsection{Configuration files}\label{subsubsec:configuration-files}
 
-\subparagraph{Description and
-priority}\label{subpar:description-and-priority-3}
+\paragraph{Description and
+priority}\label{par:description-and-priority-3}
 
 Through the configuration files the user will be able to set up certain
 parameters that will change the way the system works to adapt it to
@@ -370,10 +369,10 @@ configuration files are not strictly necessary as the system must
 initiate with a set of given default parameters, which can be
 overwritten for extended customization. Priority: LOW.
 
-\subparagraph{Stimulus/Response
-sequences}\label{subpar:stimulusresponse-sequences-3}
+\paragraph{Stimulus/Response
+sequences}\label{par:stimulusresponse-sequences-3}
 
-Stimulus: A Go, JSON or YAML file with the set of parameters to be read
+Stimulus: A Go\cite{donovan2015go}, JSON\cite{wikijson} or YAML\cite{wikiyaml} file with the set of parameters to be read
 from, so the system can use them as variables for its configuration. The
 type of file to be used will depend on the development time, as reading
 directly from a Go file or module it's easier and faster to implement
@@ -382,7 +381,7 @@ than a JSON or YAML file, as it requires a parsing step first.
 Response: The system will produce and/or build the static content
 following these parameters accordingly.
 
-\subparagraph{Functional requirements}\label{subpar:functional-requirements-2}
+\paragraph{Functional requirements}\label{par:functional-requirements-2}
 
 \emph{REQ-1}: The system will use a set of default values if the
 configuration files are not provided/changed, thus it is not strictly

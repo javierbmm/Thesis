@@ -1,9 +1,9 @@
 %! Author = javif
 %! Date = 9/14/2023
 
-\subsection{Introduction}\label{subsec:ssg-introduction}
+\section{Introduction}\label{subsec:ssg-introduction}
 
-\subsubsection{Purpose}\label{subsubsec:purpose}
+\subsection{Purpose}\label{subsubsec:purpose}
 
 The primary objective of this chapter, which is referred to as the
 Software Requirements Specification\cite{srs} (from this point forward, SRS), is
@@ -20,12 +20,12 @@ specifications, it serves as a guide for the developer to know exactly
 what to do along with the definition of done for each task and/or
 component.
 
-\subsubsection{Scope}\label{subsubsec:scope}
+\subsection{Scope}\label{subsubsec:scope}
 
 The Static Site Generator described in the document will be known as
 \texttt{VaGo}, and will henceforth be referred to as such. The
 nomenclature of this tool is derived from its implementation in the Go
-programming language, as expounded upon in subsequent sections.
+programming language\cite{donovan2015go}, as expounded upon in subsequent sections.
 Additionally, the name incorporates a homograph word in Spanish,
 ``vago'', which connotes indolence or sloth in English. This serves as a
 playful allusion to the minimal exertion demanded of prospective users
@@ -53,7 +53,7 @@ boilerplate and navigating through numerous CSS files to locate the
 particular parameter to modify.
 
 Similarly, VaGo will offer a straightforward command-line interface
-(CLI) to facilitate interaction with the program to serve the purpose of
+(CLI)\cite{wikicli} to facilitate interaction with the program to serve the purpose of
 translating content into static web pages. This will be possible once
 the content has been provided in the form of markdown, along with theme
 styling. Additionally, VaGo will enable users (via the command line) to
@@ -73,7 +73,7 @@ performance. This approach aims to alleviate the burden of web
 development for individuals who seek to share text or images without
 delving into the intricacies of the field.
 
-\subsubsection{Definitions, acronyms and
+\subsection{Definitions, acronyms and
 abbreviations.}\label{subsubsec:definitions-acronyms-and-abbreviations.}
 
 \begin{itemize}
@@ -95,7 +95,7 @@ abbreviations.}\label{subsubsec:definitions-acronyms-and-abbreviations.}
     for the sake of consistency.
 \end{itemize}
 
-\subsubsection{References}\label{subsubsec:srs-references}
+\subsection{References}\label{subsubsec:srs-references}
 
 The following collection provides a selection of research documents
 aimed at facilitating comprehension of the foundational principles that
@@ -146,26 +146,3 @@ the rationale behind the necessity of these requirements.
     https://iopscience.iop.org/article/10.1088/1757-899X/801/1/012136/pdf
 \end{itemize}
 
-\subsubsection{Overall description}\label{overall-description}
-
-This chapter comprises several sections that present a series of
-requirements according to certain demands. These requirements are
-derived from an analysis of existing tool scopes, previous work
-conducted on these tools, potential areas for improvement under specific
-conditions, the current state of web development, and key considerations
-for enhancing the user experience.
-
-Subsequently, the requirements are presented in a structured manner,
-delineating the essential aspects of these requirements, including the
-intended input and output, the format in which these capabilities are
-being built, and the precise requisites for each individual
-functionality.
-
-Therefore, the primary objective of this section is to present a
-comprehensive list of explicit requirements associated with the
-functionalities to be developed. These requirements will be supported by
-detailed explanations and justifications for their necessity. The aim is
-to establish a solid and comprehensive set of needs, prioritized
-according to their importance. This will facilitate a better
-understanding of the development tasks required to consider the project
-as completed.

@@ -1,4 +1,4 @@
-### VuePress
+## VuePress
 
 VuePress is self-defined as a minimalistic static site generator, powered by Vue to build the theme system, optimized to
 focus on content creation such as technical documentation via markdown files for metadata, content, configuration, and

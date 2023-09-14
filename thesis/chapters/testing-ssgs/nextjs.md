@@ -1,4 +1,4 @@
-### NextJS
+## NextJS
 
 NextJS is a NodeJS with ReactJS based SSG framework, meaning that in order to use it's needed to install the following
 dependencies.

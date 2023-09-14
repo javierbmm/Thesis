@@ -1,9 +1,31 @@
 %! Author = javif
 %! Date = 9/14/2023
 
-\subsection{Overall description}\label{subsec:overall-description}
+\section{Overall description}\label{overall-description}
 
-\subsubsection{Product perspective}\label{subsubsec:product-perspective}
+This chapter comprises several sections that present a series of
+requirements according to certain demands. These requirements are
+derived from an analysis of existing tool scopes, previous work
+conducted on these tools, potential areas for improvement under specific
+conditions, the current state of web development, and key considerations
+for enhancing the user experience.
+
+Subsequently, the requirements are presented in a structured manner,
+delineating the essential aspects of these requirements, including the
+intended input and output, the format in which these capabilities are
+being built, and the precise requisites for each individual
+functionality.
+
+Therefore, the primary objective of this section is to present a
+comprehensive list of explicit requirements associated with the
+functionalities to be developed. These requirements will be supported by
+detailed explanations and justifications for their necessity. The aim is
+to establish a solid and comprehensive set of needs, prioritized
+according to their importance. This will facilitate a better
+understanding of the development tasks required to consider the project
+as completed.
+
+\subsection{Product perspective}\label{subsubsec:product-perspective}
 
 \texttt{VaGo} is not the first SSG, nor does it claim to be unique or
 break any industry standards. Instead, it focuses on providing a simple
@@ -58,7 +80,7 @@ that a minimal number of commands, typically two or three, accompanied
 by fundamental parameters such as port, testing mode, and designated
 source folder, should suffice to initiate the task at hand.
 
-\subsubsection{Product functions}\label{subsubsec:product-functions}
+\subsection{Product functions}\label{subsubsec:product-functions}
 
 This Static Site Generator's primary objective is to convert markdown
 files' text to plain HTML, mapping the markup elements to understandable
@@ -77,7 +99,7 @@ theme via CSS), and to serve content via a particular port. A set of
 features for exporting and importing themes from authors whose works are
 shared online and/or in repositories may be added in the future.
 
-\subsubsection{User characteristics}\label{subsubsec:user-characteristics}
+\subsection{User characteristics}\label{subsubsec:user-characteristics}
 
 \texttt{VaGo} is designed to be utilized by individuals possessing a
 basic understanding of web development and terminal operations. However,
@@ -96,7 +118,7 @@ individuals possessing a greater depth of knowledge would be capable of
 executing more intricate undertakings by leveraging the available
 adaptability while adhering to the prescribed limitations.
 
-\subsubsection{Constraints}\label{subsubsec:constraints}
+\subsection{Constraints}\label{subsubsec:constraints}
 
 Considering that \texttt{VaGo} is programmed using the Go language,
 which inherently supports cross-platform functionality, the development
@@ -124,7 +146,7 @@ within the Go programming language will inevitably impact the system,
 and no resources will be allocated towards attempting to circumvent
 them.
 
-\subsubsection{Assumptions and
+\subsection{Assumptions and
 dependencies}\label{subsubsec:assumptions-and-dependencies}
 
 The complete functioning of the SSG is contingent upon the availability
@@ -162,7 +184,7 @@ host machine to be used by the system, and a default error message for
 the missing dependencies will be thrown in case these are not installed,
 without fancy or added complexity.
 
-\subsubsection{Apportioning of
+\subsection{Apportioning of
 requirements}\label{subsubsec:apportioning-of-requirements}
 
 It is possible that in the future, the system may incorporate

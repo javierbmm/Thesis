@@ -1,4 +1,4 @@
-### Eleventy
+## Eleventy
 
 Eleventy is a highly adaptable website site generator that enables you to create a website using a variety of template
 languages with a multitude of settings and pre-installed features to enhance and personalize the working process and

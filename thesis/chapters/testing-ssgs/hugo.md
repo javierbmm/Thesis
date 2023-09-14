@@ -1,4 +1,4 @@
-### Hugo
+## Hugo
 
 Hugo is a highly efficient, portable, and easy-to-use content management system that comes with a variety of design
 themes.

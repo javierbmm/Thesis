@@ -1,4 +1,4 @@
-### Astro
+## Astro
 
 Astro promotes itself as an all-in-one web framework, as opposed to a simple static site generator, despite serving the
 same purpose with full batteries features specialized to focus on content creation and management rather than pure

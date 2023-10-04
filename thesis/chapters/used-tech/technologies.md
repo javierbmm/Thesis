@@ -71,6 +71,3 @@ The purpose of this package is to facilitate the construction of VaGo as a comma
 implementing commands for the Build and Serve stages, which include input arguments, flags, and a help command to offer
 guidance on usage. The package aims to provide a straightforward implementation and usage experience for the end user.
 Additionally, it serves as a convenient method for installing VaGo on the user's system.
-
-## HTTP 
-

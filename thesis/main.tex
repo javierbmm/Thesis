@@ -13,6 +13,7 @@
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{float}
 \usepackage{url}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
 \singlespacing
 % Graphics
 \graphicspath{ {images/} }
@@ -20,16 +21,17 @@
 % Verbatim
 \usepackage{framed,color,verbatim}
 \usepackage{textcomp}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \definecolor{shadecolor}{rgb}{.9, .9, .9}
 \newenvironment{code}%
 {\snugshade\verbatim}%
 {\endverbatim\endsnugshade}
 % title
 \title{
-        {Static Site Generator}\\
-    {\large La Salle Campus Barcelona}\\
+    \vspace*{1cm}
     {\includegraphics{lasalle-logo}}
+    {Static Site Generator}\\
+    {\large La Salle Campus Barcelona}\\
 }
 \author{Javier Mérida}
 \date{12 02 2023}
@@ -38,11 +40,75 @@
 % Document
 \begin{document}
 
-    \maketitle
+%%    \maketitle
+%    \begin{titlepage}
+%        \begin{center}
+%%            \vspace*{1cm}
+%            \includegraphics[width=0.7\textwidth]{lasalle-logo}
+%
+%        \end{center}
+%        \textbf{Static Site Generator}
+%
+%        \vspace{0.5cm}
+%        An study of software design implementation following a minimalistic approach.
+%
+%        \vspace{1.5cm}
+%
+%        \textbf{Javier Baltazar Merida Morales}
+%
+%        \vfill
+%
+%        A thesis presented for the degree of\\
+%        International Computer Engineering
+%
+%        \vspace{0.8cm}
+%
+%
+%
+%        Department Name\\
+%        University Name\\
+%        Country\\
+%        Date
+%
+%    \end{titlepage}
+
+    \chapter*{Abstract}\label{ch:ch:chapter}
+    \section*{English}\label{sec:english}
+    This project presents the development of a Static Site Generator. It will start with explanations and insights
+    into what a Static Site Generator (SSG) is, and what is expected from it, with a study of the current state of
+    the art, then evaluating what features will be considered for the development of a new one, based on what is
+    currently available, and from this point a set of requirements will be built, using the Software Requirement
+    Specification IEEE document guide, to establish what could be expected and/or required from it. After this, the
+    document will explore a software design proposal, which may or not be followed in the implementation as further
+    changes may be needed during development. Finally, it will reach some conclusions based on what has been achieved
+    and whether the proposed approach was correct, or if there is any improvement that could be made or evaluated.
+
+    \section*{Español}
+    Este proyecto presenta el desarrollo de un Generador de Sitios Estáticos. Comenzará con explicaciones y
+    perspectivas sobre qué es un Generador de Sitios Estático (SSG), qué se espera de él, con un estudio del estado
+    actual del arte, para luego evaluar qué características se considerarán para el desarrollo de uno nuevo, basado
+    en lo que está disponible actualmente, y a partir de este punto se construirá un conjunto de requisitos,
+    utilizando la guía del documento de Especificación de requisitos de software IEEE, para establecer lo que se podría
+    esperar y/o requerir del mismo. Después de esto, el documento explorará una propuesta de diseño de software, que
+    puede seguirse o no en la implementación, ya que es posible que se necesiten más cambios durante el desarrollo.
+    Finalmente, se llegará a algunas conclusiones en base a lo logrado, y si el enfoque propuesto fue correcto, o si
+    existe alguna mejora que se pueda realizar o evaluar.
+
+    \section*{Català}
+    Aquest projecte presenta el desenvolupament d'un generador de llocs estàtics. Començarà amb explicacions i
+    coneixements sobre què és un generador de llocs estàtics (SSG) i què se n'espera, amb un estudi de l'estat actual
+    de la tècnica, i després avaluant quines característiques es tindran en compte per al desenvolupament d'un de nou
+    . , basant-se en el que està disponible actualment, i a partir d'aquest punt es construirà un conjunt de
+    requisits, utilitzant la guia de documents IEEE Software Requirement Specification, per establir què es podria
+    esperar i/o requerir d'aquest nou model. Després d'això, el document explorarà una proposta de disseny de
+    programari, que es pot seguir o no en la implementació, ja que poden ser necessaris més canvis durant el
+    desenvolupament. Finalment, s'arriba a unes conclusions en funció del que s'ha aconseguit i de si l'enfocament
+    proposat era correcte, o si hi ha alguna millora que es podria fer o avaluar.
 
     \tableofcontents
 
     \input{chapters/introduction.tex}
+
 
     \chapter{Trying out popular SSGs}\label{ch:trying-out-popular-ssgs}
 
@@ -88,7 +154,8 @@
     exploration on what features are stand out in order to consider as requisites to build a new SSG.
 
 
-    Also, it is important to note that the lack or the presence of any of these characteristic do not make any SSG better
+    Also, it is important to note that the lack or the presence of any of these characteristic do not make any SSG
+    better
     than others, as each one of them are made for a specific purpose and shine in terms of addressing the obstacle
     they are meant to\cite{khalid}.
     In fact, this section must be taken as an exploration of requisites to be taken into account.
@@ -101,16 +168,27 @@
         \begin{tabular}{|
                 >{\columncolor[HTML]{EFEFEF}}c |c|c|c|c|c|}
             \hline
-            \cellcolor[HTML]{C0C0C0}      & \cellcolor[HTML]{EFEFEF}NextJS & \cellcolor[HTML]{EFEFEF}Hugo & \cellcolor[HTML]{EFEFEF}VuePress & \cellcolor[HTML]{EFEFEF}Eleventy & \cellcolor[HTML]{EFEFEF}Astro \\ \hline
-            \textbf{Easy to use}          & Yes                            & Yes                          & No                               & Yes                              & Yes                           \\ \hline
-            \textbf{Flexible}             & No                             & No                           & No                               & Yes                              & Yes                           \\ \hline
-            \textbf{Strict structure}     & No                             & Yes                          & No                               & No                               & No                            \\ \hline
-            \textbf{Template system}      & No                             & Yes                          & No                               & Yes                              & Yes                           \\ \hline
-            \textbf{Themes}               & No                             & Yes                          & No                               & Yes                              & Yes                           \\ \hline
-            \textbf{Performance oriented} & Yes                            & Yes                          & NA                               & Yes                              & Yes                           \\ \hline
-            \textbf{Framework dependant}  & Yes                            & No                           & Yes                              & No                               & No                            \\ \hline
-            \textbf{Easy to install}      & Yes*                           & Yes                          & Yes*                             & Yes*                             & Yes*                          \\ \hline
-            \textbf{File-based routing}   & Yes                            & Yes                          & NA                               & Yes                              & Yes                           \\ \hline
+            \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{EFEFEF}NextJS & \cellcolor[HTML]{EFEFEF}Hugo &
+            \cellcolor[HTML]{EFEFEF}VuePress & \cellcolor[HTML]{EFEFEF}Eleventy & \cellcolor[HTML]{EFEFEF}Astro \\
+            \hline
+            \textbf{Easy to use} & Yes & Yes & No
+            & Yes & Yes \\ \hline
+            \textbf{Flexible} & No & No & No
+            & Yes & Yes \\ \hline
+            \textbf{Strict structure} & No & Yes & No
+            & No & No \\ \hline
+            \textbf{Template system} & No & Yes & No
+            & Yes & Yes \\ \hline
+            \textbf{Themes} & No & Yes & No
+            & Yes & Yes \\ \hline
+            \textbf{Performance oriented} & Yes & Yes & NA
+            & Yes & Yes \\ \hline
+            \textbf{Framework dependant} & Yes & No & Yes
+            & No & No \\ \hline
+            \textbf{Easy to install} & Yes* & Yes & Yes*
+            & Yes* & Yes* \\ \hline
+            \textbf{File-based routing} & Yes & Yes & NA
+            & Yes & Yes \\ \hline
         \end{tabular}\label{tab:table}
     \end{table}
 
@@ -156,7 +234,7 @@
     \input{chapters/future/futurelines.tex}
 
     % Bibliography
-    \markdownInput{chapters/bibliography.md}
+%    \markdownInput{chapters/bibliography.md}
 
     \bibliography{chapters/citations}
     \bibliographystyle{sapthesis}
